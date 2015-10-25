@@ -13,5 +13,9 @@
     </div>
 </div></div>
 
+<script type="text/javascript" src="<?php echo bloginfo('template_url')?>/scripts/html5.js"></script>
+<script type="text/javascript" src="<?php echo bloginfo('template_url')?>/scripts/angular.js"></script>
+<script type="text/javascript" src="<?php echo bloginfo('template_url')?>/scripts/main.js"></script>
+
 </body>
 </html>

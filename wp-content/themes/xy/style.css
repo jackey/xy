@@ -440,7 +440,7 @@ html.no-js { margin-top: 0px !important; }
 
 .header-bar {
     padding-left: 30px;
-    background-color: #eee;
+    background-color: #f9f9f9;
 }
 
 .header-bar p {
@@ -454,8 +454,9 @@ html.no-js { margin-top: 0px !important; }
 }
 
 .header-bar .icon {
-    float: left;
-    padding-right: 10px;
+    float: right;
+    padding-right: 11px;
+    cursor: pointer;
 }
 
 .menu a {

@@ -306,8 +306,5 @@
     </div>
 
     <?php get_sidebar(); ?>
-    <div id="delimiter"></div>
-    </div>
-
 
 <?php get_footer() ?>

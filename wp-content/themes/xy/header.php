@@ -22,7 +22,7 @@
                 <p class="gmail icon"><i class="fa fa-paper-plane-o"></i></p>
                 <p class="wechat icon"><i class="fa fa-wechat"></i></p>
                 <p class="weibo icon"><i class="fa fa-weibo"></i></p>
-                <p><i class="phone">Tel</i>: 15821121753</p>
+                <p class="phone icon"><i class="fa fa-phone"></i></p>
             </div>
             <div class="row">
                 <div class="top">
