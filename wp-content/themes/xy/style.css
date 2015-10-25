@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+html{
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;padding:0;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+
+body,button,input,select,textarea{
+    /*font:12px/1.5 tahoma,arial,\5b8b\4f53;*/
+}
+input,select,textarea{
+    font-size:100%;
+}
+
+table{
+    border-collapse:collapse;border-spacing:0;
+}
+
+th{
+    text-align:inherit;
+}
+
+fieldset,img{
+    border:0;
+}
+
+iframe{
+    display:block;
+}
+
+abbr,acronym{
+    border:0;font-variant:normal;
+}
+
+del {
+    text-decoration:line-through;
+}
+
+address,caption,cite,code,dfn,em,th,var {
+    font-style:normal;
+    font-weight:500;
+}
+
+ol,ul {
+    list-style:none;
+}
+
+caption,th {
+    text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:500;
+}
+
+q:before,q:after {
+    content:'';
+}
+
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+a:hover {
+    text-decoration:underline;
+}
+
+ins,a {
+    text-decoration:none;
+}
+
+.clearfix:before, .clearfix:after {
+    visibility:hidden;
+    display:table;
+    font-size:0;
+    content:" ";
+    height:0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom:1;
+}
+
+.fn-clear:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+
+.fn-clear {
+    zoom:1;
+}
+
+body .fn-hide {
+    display:none;
+}
+
+.fn-left,.fn-right {
+    display:inline;
+}
+.fn-left {
+    float:left;
+}
+.fn-right {
+    float:right;
+}
+
+/* FULL WIDTH PAGE */
+html, body {
+    position: relative;
+    min-height: 100%;
+    height: 100%;
+    font-family: Proximanova;
+    font-weight: normal;
+}
+
+.hideme {
+    display: none;
+}
+
+html.no-js { margin-top: 0px !important; }
+* html.no-js body { margin-top: 0px !important; }
+@media screen and ( max-width: 782px ) {
+    html.no-js { margin-top: 0px !important; }
+    * html.no-js body { margin-top: 0px !important; }
+}
+
+.business-intro {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.business-intro .teaser{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.business-intro.mba .teaser {
+    background-image: url(./misc/home-goal-college.jpg);
+}
+
+.business-intro.ms .teaser {
+    background-image: url(./misc/home-goal-mba.jpg);
+}
+
+.business-intro.gmat .teaser {
+    background-image: url(./misc/home-goal-college.jpg);
+}
+
+.business-intro.toefl .teaser {
+    background-image: url(./misc/home-goal-mba.jpg);
+}
+
+.business-intro .intro, .business-intro .teaser {
+    height: 250px;
+    float: left;
+    width: 50%;
+}
+
+.business-intro .intro {
+    padding: 30px;
+}
+
+.business-intro .teaser {
+    width: 45%;
+    float: right;
+    position: relative;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    top: 0px;
+}
+
+.teaser a:hover {
+    text-decoration: none;
+}
+
+.teaser a {
+    position: absolute;
+    display: block;
+    border-radius: 0px;
+    padding: 5px 10px;
+    font-size: 13px;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    text-align: center;
+    margin-left: -100px;
+    margin-top: -14px;
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: 100;
+}
+
+.business-intro.odd .intro{
+    float: left;
+}
+
+.business-intro.odd .intro{
+    float: right;
+}
+
+.business-intro.event .intro{
+    float: right;
+}
+
+.business-intro.event .intro{
+    float: left;
+}
+
+.intro h3 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.intro p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.section > h2 {
+    text-align: center;
+    font-size: 21px;
+    font-weight: normal;
+    font-style: italic;
+    margin-top: 80px;
+}
+
+.section > p {
+    text-align: center;
+    margin-bottom: 5em;
+    font-style: italic;
+}
+
+.line3 {
+    height: 0px;
+    width: 27%;
+    border-bottom: 1px solid #cfbbd8;
+    margin: 2.5em auto;
+    visibility: hidden;
+}
+
+.member-info {
+    position: relative;
+    margin: 15px 0px 15px 0px;
+}
+
+.member-info .minfo {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px 0px 20px 20px;
+    background-color: rgba(0,0,0,.2);
+}
+
+.member-info img {
+    width:100%;
+}
+
+.member-info i{
+    color:#fff;
+    font-style: normal;
+}
+
+.member-info .line {
+    width: 75px;
+    height: 1px;
+    line-height: 1px;
+    margin: 5px 0px 5px 0px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.btn-fill {
+    width:100%;
+}
+
+
+.footer-links {
+    display: table;
+    float: right;
+}
+
+.footer-links .item {
+    float: left;
+}
+
+.blog {
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.blog .section {
+    text-align: center;
+}
+
+.people-ceo {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.blog .section i {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    word-spacing: 10px;
+    margin-top: 30px;
+}
+
+.blog .section p {
+    margin-top: 22px;
+    font-style: italic;
+}
+
+.blog .btn-readblog {
+    margin-top: 65px;
+}
+
+.btn-readblog {
+    background-color: #fff;
+    color: #333;
+    border-radius: 0px;
+    border: 1px solid #888;
+    width: 155px;
+}
+
+.people-ceo img {
+    width:100%;
+    border-radius: 100px;
+}
+
+.footer-links > li > a {
+    color: #333;
+    font-size: 13px;
+}
+
+.footer-links > li > a:hover {
+    background-color: #fff;
+    border-radius: 0px;
+    border:none;
+    color: #222;
+}
+
+.contact .section > p {
+    font-size: 15px;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.contact .form-control {
+    height: 70px;
+    border: none;
+    border-radius: 0px;
+    background-color: #fff;
+    box-shadow: none;
+    display: table-cell;
+}
+
+.contact .form-control.focus {
+    border-bottom: 1px solid #eee;
+}
+
+.contact .btn-fill {
+    background-color: #fff !important;
+    border: 1px solid #888;
+    color: #333 !important;
+    border-radius: 0px;
+    height: 50px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.contact {
+    margin-bottom: 170px;
+}
+
+#header .top {
+    float: left;
+    position: relative;
+}
+
+.top img {
+    width: 100px;
+    position: absolute;
+    left: 63px;
+    top: 21px;
+}
+
+.top a {
+    display: block;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 32px;
+    margin-right: 15px;
+}
+
+.main-nav .menu {
+    display: table;
+    float: none;
+    position: relative;
+}
+
+.main-nav li {
+    float: left;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.header-bar {
+    padding-left: 30px;
+    background-color: #eee;
+}
+
+.header-bar p {
+    font-size: 11px;
+    font-weight: normal;
+    text-align: right;
+    height: 21px;
+    line-height: 21px;
+    padding-right: 30px;
+    color: #616161;
+}
+
+.header-bar .icon {
+    float: left;
+    padding-right: 10px;
+}
+
+.menu a {
+    color: #333;
+}
+
+.menu a:hover {
+    text-decoration: none;
+}
+
+#content .container {
+    margin-top: 29px;
+}
+
+.business-intro .teaser {
+    text-align: center;
+}
+
+.teaser h3 {
+    text-align: center;
+    position: relative;
+    color: #fefefe;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 18%;
+    font-size: 30px;
+}
+
+.teaser h3 i, .teaser h3 span{
+    display: block;
+}
+
+.teaser a {
+    display: none;
+}
