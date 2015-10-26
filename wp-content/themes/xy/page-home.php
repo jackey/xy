@@ -8,30 +8,30 @@
 
     <div id="main">
     <div id="content">
-    <div class="container btype">
+    <div class="container btype" >
         <div class="row section">
-            <h2>咨询范围</h2>
+            <h2 data-sr="ease-in-out, over 1s, wait 0.5s">咨询范围</h2>
             <div class="line3"></div>
-            <p>" 我们帮您设计完善的进度目标 "</p>
-
+            <p data-sr="ease in out, over 1s, wait 0.5s">" 我们帮您设计完善的进度目标 "</p>
             <div class="row">
                 <div class="business-intro mba odd clearfix">
-                    <div class="intro">
+                    <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <p>MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 </p>
                     </div>
-                    <div class="teaser">
+                    <div class="teaser" data-sr="enter left, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-bank"></i><span>MBA</span></h3>
+                        <p>MBA 联系 联系 我们</p>
                         <a href="mail:jackey@fumer.cn&titlte=MBA咨询">Email 联系</a>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="business-intro ms even">
-                    <div class="intro">
+                    <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
                         <p>MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询</p>
                     </div>
-                    <div class="teaser">
+                    <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-graduation-cap"></i><span>MS</span></h3>
                         <a href="mail:jackey@fumer.cn&titlte=MBA咨询">Email 联系</a>
@@ -40,10 +40,10 @@
             </div>
             <div class="row">
                 <div class="business-intro odd gmat">
-                    <div class="intro">
+                    <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <p>GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试</p>
                     </div>
-                    <div class="teaser">
+                    <div class="teaser" data-sr="enter  left, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-pencil"></i><span>GMAT</span></h3>
                         <a href="">阅读详情</a>
@@ -52,10 +52,10 @@
             </div>
             <div class="row">
                 <div class="business-intro toefl even">
-                    <div class="intro">
+                    <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
                         <p>TOEFL 考试 TOEFL 考试 TOEFL 考试 TOEFL 考试</p>
                     </div>
-                    <div class="teaser">
+                    <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-slack"></i><span>TOEFL</span></h3>
                         <a href="">阅读详情</a>
@@ -67,13 +67,13 @@
 
     <div class="container team">
         <div class="row section">
-            <h2>我们的团队</h2>
+            <h2 data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们的团队</h2>
 
             <div class="line3"></div>
-            <p>我们帮您定位完善的目标方式</p>
+            <p data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们帮您定位完善的目标方式</p>
 
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -143,7 +143,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -157,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -171,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -185,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -199,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -213,7 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -227,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
                     <div class="member-info">
                         <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
 
@@ -245,17 +245,17 @@
         </div>
     </div>
 
-    <div class="container blog">
+    <div class="container blog" >
         <div class="row section">
-            <div class="icon people-ceo"><img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/melody.jpg' ?>" alt=""/></div>
-            <i>携隱CEO</i>
+            <div class="icon people-ceo"><img data-sr="wait 0s, ease-in-out 50px, over 1s" src="<?php echo esc_url(get_template_directory_uri()) . '/misc/melody.jpg' ?>" alt=""/></div>
+            <i data-sr="wait 0s, ease-in-out 50px, over 1s">携隱CEO</i>
 
-            <p>"在国内大概每年有一百万学生申请MAB 通过率仅20% 我们的使命是帮助中国学生有效申请..."</p>
-            <button class="btn btn-readblog">阅读更多</button>
+            <p data-sr="wait 0s, ease-in-out 50px, over 1s">"在国内大概每年有一百万学生申请MAB 通过率仅20% 我们的使命是帮助中国学生有效申请..."</p>
+            <button data-sr="wait 0s, ease-in-out 50px, over 1s" class="btn btn-readblog">阅读更多</button>
         </div>
     </div>
 
-    <div class="container contact">
+    <div class="container contact" data-sr="">
         <div class="row section">
             <p>" 联系我们, 让我们帮您一起完善目标 " </p>
             <div class="row">
