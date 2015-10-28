@@ -76,7 +76,7 @@
             <p data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们帮您定位完善的目标方式</p>
 
             <div class="row" >
-                <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter bottom , vve 100px, over 0.8s">
+                <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="enter bottom, move 100px, over 1s">
                     <div class="member-info">
                         <img ng-src="{{member['avatar']}}" alt=""/>
 
