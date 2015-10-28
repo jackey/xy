@@ -616,7 +616,7 @@ body.ngdialog-open {
 }
 
 .footer-links .item {
-    float: left;
+    float: right;
 }
 
 .blog {
@@ -704,10 +704,6 @@ body.ngdialog-open {
     height: 50px;
     outline: none !important;
     box-shadow: none !important;
-}
-
-.contact {
-    margin-bottom: 170px;
 }
 
 #header .top {
@@ -1026,5 +1022,97 @@ input.active {
     color: #fff;
     opacity: 1;
 }
+
+.blog-list > h2{
+    text-align: center;
+    font-size: 17px;
+    color: #444;
+    line-height: 20px;
+    margin: 60px 0px 20px 0px;
+}
+
+.blog-list > p{
+    font-size: 15px;
+    font-style: italic;
+    margin: 0px 0px 20px;
+    text-align: center;
+}
+
+.blog-list .author {
+    float: right;
+    margin-top: 10px;
+}
+
+.blog-item {
+    position:relative;
+    margin-top: 50px;
+}
+
+.blog-item-content {
+    padding: 40px 50px;
+}
+
+.blog-item-action {
+    position: absolute;
+    bottom: 0px;
+    width: 80%;
+    left: 0px;
+    margin-left: 19%;
+}
+
+.blog-list img {
+    width:100%;
+}
+
+#footer {
+    height: 200px;
+}
+
+#footer .footer-links {
+    display: table;
+    float: right;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: 11;
+    width:100%;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.blog-item-content .title {
+    font-size: 16px;
+    color: #333;
+}
+
+.blog-item-content .teaser {
+    line-height: 200%;
+    margin-top: 10px;
+}
+
+.blog-item-action .like {
+    margin-right: 20px;
+}
+
+.like .fa, .comments .fa{
+    padding-right: 5px;
+}
+
+.like {
+    margin-right: 20px;
+    color: #565656;
+}
+
+.comments {
+   color: #565656;
+    margin-right: 20px;
+}
+
+.blog-item-action a {
+    color:#333;
+}
+
+
+
+
 
 
