@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-    <div id="main">
+    <div id="main" data-scroll-header>
     <div id="content">
     <div class="container btype" >
         <div class="row section">
@@ -14,15 +14,15 @@
             <div class="line3"></div>
             <p data-sr="ease in out, over 1s, wait 0.5s">" 我们帮您设计完善的进度目标 "</p>
             <div class="row">
-                <div class="business-intro mba odd clearfix">
+                <div class="business-intro mba odd clearfix" >
                     <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <p>MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 </p>
                     </div>
-                    <div class="teaser" data-sr="enter left, move 100px, over 1s, wait 0.5s">
+                    <div class="teaser" ng-mouseover="businessHover($event)" data-sr="enter left, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-bank"></i><span>MBA</span></h3>
                         <p>MBA 联系 联系 我们</p>
-                        <a href="mail:jackey@fumer.cn&titlte=MBA咨询">Email 联系</a>
+                        <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,8 @@
                     <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-graduation-cap"></i><span>MS</span></h3>
-                        <a href="mail:jackey@fumer.cn&titlte=MBA咨询">Email 联系</a>
+                        <p>MBA 联系 联系 我们</p>
+                        <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
                     </div>
                 </div>
             </div>
@@ -46,7 +47,8 @@
                     <div class="teaser" data-sr="enter  left, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-pencil"></i><span>GMAT</span></h3>
-                        <a href="">阅读详情</a>
+                        <p>MBA 联系 联系 我们</p>
+                        <a href=""><span>阅读详情 <br/> <br/> 阅读详情</span></a>
                     </div>
                 </div>
             </div>
@@ -58,7 +60,8 @@
                     <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
                         <div class="bg"></div>
                         <h3><i class="fa fa-slack"></i><span>TOEFL</span></h3>
-                        <a href="">阅读详情</a>
+                        <p>MBA 联系 联系 我们</p>
+                        <a href=""><span>阅读详情 <br/> <br/> 阅读详情</span></a>
                     </div>
                 </div>
             </div>
@@ -72,172 +75,18 @@
             <div class="line3"></div>
             <p data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们帮您定位完善的目标方式</p>
 
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
+            <div class="row" >
+                <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter bottom , move 100px, over 0.8s">
                     <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
+                        <img ng-src="{{member['avatar']}}" alt=""/>
 
                         <div class="bg"></div>
+                        <div class="desc">{{member['desc']}}</div>
                         <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
+                            <i class="name">{{member['name']}}</i>
+                            <i class="school">/ {{member['university']}}</i>
                             <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 0.5s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3" data-sr="wait 1s, enter left ,move 50px, over 0.5s">
-                    <div class="member-info">
-                        <img src="<?php echo esc_url(get_template_directory_uri()) . '/misc/member1.png' ?>" alt=""/>
-
-                        <div class="bg"></div>
-                        <div class="minfo">
-                            <i class="name">Jackey</i>
-                            <i class="school">Hunan University</i>
-
-                            <div class="line"></div>
-                            <i class="job-title">Director</i>
+                            <i class="job-title">{{member['title']}}</i>
                         </div>
                     </div>
                 </div>
@@ -264,21 +113,21 @@
                         <label class=" sr-only " for="name">姓名: </label>
 
                         <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <input type="text" class="form-control" placeholder="请输入您的姓名" name="name" id="name"/>
+                            <input ng-class="{active: nameFocused}" ng-init="nameFocused=false" ng-focus="nameFocused=true" ng-blur="nameFocused=false" ng-model="name" type="text" class="form-control" placeholder="请输入您的姓名" name="name" id="name"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class=" sr-only " for="email">邮箱: </label>
 
                         <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <input type="text" class="form-control" placeholder="请输入您的邮箱" name="email" id="email"/>
+                            <input ng-class="{active: emailFocused}" ng-init="emailFocused=false" ng-focus="emailFocused=true" ng-blur="emailFocused=false" ng-model="email" type="text" class="form-control" placeholder="请输入您的邮箱" name="email" id="email"/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="phone">手机:</label>
 
                         <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <input type="text" class="form-control" placeholder="请输入您的手机号码 方便我们联系到您" name="email"
+                            <input ng-class="{active: phoneFocused}" ng-init="phoneFocused=false" ng-focus="phoneFocused=true" ng-blur="phoneFocused=false" ng-model="phone" type="text" class="form-control" placeholder="请输入您的手机号码 方便我们联系到您" name="email"
                                    id="email"/>
                         </div>
                     </div>
@@ -286,7 +135,7 @@
                         <label class=" sr-only " for="target">关注: </label>
 
                         <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <select class="form-control" name="target" id="target">
+                            <select ng-model="target" class="form-control" name="target" id="target">
                                 <option value="mba">MBA</option>
                                 <option value="ms">MS</option>
                                 <option value="gmat">GAMT</option>

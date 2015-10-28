@@ -26,11 +26,11 @@
     </script>
 
 </head>
-<body <?php body_class(); ?> ng-controller="XYController" ng-init="init()">
+<body <?php body_class(); ?> ng-controller="XYController" data-image-preload style="opacity: 0">
 <div id="wrapper">
     <div id="header">
         <div class="container" data-sr="wait 0s, over 1s">
-            <div class="row header-bar" ng-click="showContactSocialPopup()">
+            <div class="row header-bar" ng-click="showContactSocialPopup($event)">
                 <p class="gmail icon"><i class="fa fa-paper-plane-o"></i></p>
                 <p class="wechat icon"><i class="fa fa-wechat"></i></p>
                 <p class="weibo icon"><i class="fa fa-weibo"></i></p>
@@ -43,7 +43,20 @@
                         <img src="<?php echo esc_url(get_template_directory_uri())?>/misc/logo.png" alt=""/>
                     </a>
                 </div>
-                <?php wp_nav_menu(array('theme_location' => 'main-nav', 'container_class' => 'main-nav'))?>
             </div>
+            <?php wp_nav_menu(array('theme_location' => 'main-nav', 'container_class' => 'main-nav'))?>
         </div>
+    </div>
+
+    <div id="min-header">
+        <div class="logo">
+            <img src="<?php echo esc_url(get_template_directory_uri())?>/misc/logo.png" alt=""/>
+        </div>
+        <div class="header-bar clearfix" ng-click="showContactSocialPopup($event)">
+            <p class="gmail icon"><i class="fa fa-paper-plane-o"></i></p>
+            <p class="wechat icon"><i class="fa fa-wechat"></i></p>
+            <p class="weibo icon"><i class="fa fa-weibo"></i></p>
+            <p class="phone icon"><i class="fa fa-phone"></i><span>1582112173</span></p>
+        </div>
+        <?php wp_nav_menu(array('theme_location' => 'main-nav', 'container_class' => 'main-nav'))?>
     </div>
