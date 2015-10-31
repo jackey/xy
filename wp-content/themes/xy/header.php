@@ -34,7 +34,6 @@
                 <p class="gmail icon"><i class="fa fa-paper-plane-o"></i></p>
                 <p class="wechat icon"><i class="fa fa-wechat"></i></p>
                 <p class="weibo icon"><i class="fa fa-weibo"></i></p>
-                <p class="phone icon"><i class="fa fa-phone"></i><span>1582112173</span></p>
             </div>
             <div class="row" data-sr="wait 0s, over 1s">
                 <div class="top">
@@ -56,7 +55,6 @@
             <p class="gmail icon"><i class="fa fa-paper-plane-o"></i></p>
             <p class="wechat icon"><i class="fa fa-wechat"></i></p>
             <p class="weibo icon"><i class="fa fa-weibo"></i></p>
-            <p class="phone icon"><i class="fa fa-phone"></i><span>1582112173</span></p>
         </div>
         <?php wp_nav_menu(array('theme_location' => 'main-nav', 'container_class' => 'main-nav'))?>
     </div>

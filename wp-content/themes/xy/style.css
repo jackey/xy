@@ -1111,8 +1111,101 @@ input.active {
     color:#333;
 }
 
+.single-post #content {
+    margin-top: 90px;
+}
 
+.single-post  .post-title {
+    font-size: 22px;
+    color: #434343;
+    line-height: 250%;
+}
 
+.single-post .avatar img{
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
 
+.single-post .author {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
+.single-post .time {
+    float: none;
+}
 
+.byname .name , .byname .avatar{
+    float: none;
+}
+
+.single-post .authors {
+    margin-bottom: 138px;
+    margin-top: 46px;
+    position: relative;
+}
+
+.single-post .byname {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    text-align: center;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.single-post .avatar  {
+    display: block;
+    float: none;
+}
+
+.byname .name {
+    margin-top: 10px;
+    display: block;
+}
+
+.time i.fa {
+    margin-right: 10px;
+}
+
+.map h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+    line-height: 200%;
+    text-align: left;
+}
+
+.map .title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mapimg img {
+    width:100%;
+}
+
+.contact-address {
+    margin-top: 0px;
+}
+
+.contact-address span {
+    display: block;
+    font-size: 14px;
+    line-height: 200%;
+}
+
+.contact-address i.fa {
+    margin-right: 10px;
+    color: #2d46ff;
+}
+
+.contact-address a, .contact-address a:hover {
+    color:#333;
+    text-decoration: none;
+}
+
+#content .container.map {
+    margin-top: 130px;
+}
