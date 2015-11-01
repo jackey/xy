@@ -3,87 +3,18 @@
 })(function () {
 
     angular.module('xy', ['ngDialog'])
-        .factory('TeamMember', ['$http', function ($http) {
-            var member = [
-                {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }, {
-                    name: 'Jackey',
-                    university: 'Hunan Railway University',
-                    avatar: '/wp-content/themes/xy/misc/member1.png',
-                    desc: '10年的咨询经验，为您提供专业服务',
-                    title: 'Director'
-                }
-            ];
-            return {
-                getAllMember: function () {
-                    return member;
-                }
-            }
+        .factory('TeamMember', ['$http', '$q' , function ($http, $q) {
+
+            var defer = $q.defer();
+
+            $http.get(ajaxurl+ '?action=team_member')
+                .then(function (response) {
+                    var member = response.data;
+                    defer.resolve(member);
+                }, function (response) {
+                    defer.reject();
+                });
+            return defer.promise;
         }])
         .directive('imagePreload', ['ImageLoader', '$rootScope' ,'$timeout' ,function (ImageLoader, $rootScope, $timeout) {
             return {
@@ -161,6 +92,37 @@
                 }
             };
         }])
+        .factory('ContactForm', ['$http', '$q', function ($http, $q) {
+            return function (name, email, phone, type) {
+                return $q(function (resovle, reject)  {
+                    $http.post(ajaxurl+ '?action=submit_contact_form', {
+                        name: name,
+                        email: email,
+                        phone: phone,
+                        type: type
+                    }).then(function (response) {
+                        resovle();
+                    },function () {
+                        reject();
+                    });
+                });
+            }
+        }])
+        .factory('BlogList', ['$http', '$q', function ($http, $q) {
+           return function (term) {
+                return $q(function (resolve, reject) {
+                    var data = {};
+                    if (term) data['term'] = term;
+                    $http
+                        .post(ajaxurl+ '?action=blog_list', data)
+                        .then(function (response) {
+                            resolve(response);
+                        }, function (response) {
+                            reject(response);
+                        });
+                });
+           };
+        }])
         .factory("ImageLoader", [function ($timeout) {
 
             function Loader(urls) {
@@ -230,7 +192,17 @@
                 return new Loader(urls);
             };
         }])
-        .controller('XYController' , ['$scope', '$rootScope' ,'ngDialog', 'TeamMember' ,function ($scope, $rootScope ,$ngDialog, $TeamMember) {
+        .controller('XYController' , ['$scope', '$rootScope', '$timeout' , 'ngDialog', 'TeamMember', 'ContactForm', 'BlogList' ,function (
+            $scope,
+            $rootScope ,
+            $timeout,
+            $ngDialog,
+            TeamMember,
+            ContactForm,
+            BlogList) {
+
+            $scope.members = [];
+            $scope.blogs = [];
 
             $scope.init = function () {
                 window.sr = new scrollReveal();
@@ -246,8 +218,6 @@
                 });
             };
 
-            $scope.members = $TeamMember.getAllMember();
-
             $rootScope.$on('ImagesLoaded', function () {
                 $scope.init();
             });
@@ -255,6 +225,55 @@
             $scope.businessHover = function ($event) {
                 var $element = angular.element($event.target);
                 $element.addClass('hover-on-it');
+            };
+
+            TeamMember.then(function (members) {
+                angular.forEach(members, function (member) {
+                    $scope.members.push(member);
+
+                })
+            });
+
+            BlogList().then(function (response) {
+                angular.forEach(response.data, function (blog) {
+                    $scope.blogs.push(blog);
+                });
+            });
+
+            $scope.$watch('email', function (newEmail) {
+                var EMAIL_REGEXP = /^[a-z0-9!#$%&'*+/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
+                if (newEmail
+                    && newEmail.length
+                    && EMAIL_REGEXP.test(newEmail)) {
+                    // 邮件有效
+                }
+                else {
+
+                }
+            });
+
+            $scope.submitContactForm = function($event) {
+                $event.preventDefault();
+                $element = angular.element($event.target);
+                if ($element.prop('tagName') == 'SPAN') $element = $element.parent();
+
+                $element.prop('disable', true);
+
+                $element.find('.bnow').css({opacity: 0});
+                $element.find('.bold').css({opacity: 1});
+
+                $timeout(function() {
+                    $element.find('span').removeAttr('style');
+                }, 1000);
+
+                ContactForm(
+                    $scope.name,
+                    $scope.phone,
+                    $scope.email,
+                    $scope.type
+                ).then(function () {
+                        $element.prop('disable', false);
+                    });
             };
     }]);
 

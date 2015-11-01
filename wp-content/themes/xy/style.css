@@ -1208,4 +1208,45 @@ input.active {
 
 #content .container.map {
     margin-top: 130px;
+    margin-bottom: 100px;
+}
+
+#allmap {
+    height: 360px;
+}
+
+.map-header h2 {
+    font-size: 32px;
+    text-align: center;
+    line-height: 200%;
+}
+
+.map-header p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 300%;
+    margin: 28px 0px 94px 0px;
+}
+
+.alert-theme .ngdialog-content {
+    padding: 7px;
+    width: 220px;
+    background-color: #333;
+    color: #eee;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    margin-left: -110px;
+    text-align: center;
+    top: 40%;
+}
+
+.bold {
+    opacity: 0;
+    transition: all 0.8s ease;
+    margin-left: -29px;
+}
+
+.bnow {
+    transition: all 0.8s ease;
 }

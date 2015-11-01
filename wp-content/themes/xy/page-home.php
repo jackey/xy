@@ -48,7 +48,7 @@
                         <div class="bg"></div>
                         <h3><i class="fa fa-pencil"></i><span>GMAT</span></h3>
                         <p>MBA 联系 联系 我们</p>
-                        <a href=""><span>阅读详情 <br/> <br/> 阅读详情</span></a>
+                        <a href="<?php echo get_permalink('45')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                         <div class="bg"></div>
                         <h3><i class="fa fa-slack"></i><span>TOEFL</span></h3>
                         <p>MBA 联系 联系 我们</p>
-                        <a href=""><span>阅读详情 <br/> <br/> 阅读详情</span></a>
+                        <a href="<?php echo get_permalink('47')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
                     </div>
                 </div>
             </div>
@@ -78,15 +78,15 @@
             <div class="row" >
                 <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="enter bottom, move 100px, over 1s">
                     <div class="member-info">
-                        <img ng-src="{{member['avatar']}}" alt=""/>
+                        <img ng-src="{{member['avatar']['url']}}" alt=""/>
 
                         <div class="bg"></div>
                         <div class="desc">{{member['desc']}}</div>
                         <div class="minfo">
-                            <i class="name">{{member['name']}}</i>
-                            <i class="school">/ {{member['university']}}</i>
+                            <i class="name">{{member['first_name']}} {{member['last_name']}}</i> <br/>
+                            <i class="school"> {{member['college']}}</i>
                             <div class="line"></div>
-                            <i class="job-title">{{member['title']}}</i>
+                            <i class="job-title">{{member['position_title']}}</i>
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                         <label class=" sr-only " for="target">关注: </label>
 
                         <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <select ng-model="target" class="form-control" name="target" id="target">
+                            <select ng-model="type" class="form-control" name="type" id="type">
                                 <option value="mba">MBA</option>
                                 <option value="ms">MS</option>
                                 <option value="gmat">GAMT</option>
@@ -145,7 +145,7 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                            <button class="btn btn-primary btn-fill">发送</button>
+                            <button class="btn btn-primary btn-fill" ng-click="submitContactForm($event)"><span class="bnow">发送</span><span class="bold">发送成功</span></button>
                         </div>
                     </div>
                 </form>

@@ -12,6 +12,10 @@
     <![endif]-->
     <?php wp_head(); ?>
 
+    <script>
+        window.ajaxurl = "<?php echo admin_url('admin-ajax.php')?>";
+    </script>
+
     <title>携隱咨询</title>
 
     <script type="text/ng-template" id="contactSocialTpl">
@@ -22,6 +26,12 @@
                 <li><p><a href="mailto:xieyin.studio@gmail.com?title=&body=">邮箱(点击联系我们)</a></p></li>
                 <li><p><a href="http://weibo.com/u/5112716368">微博(携隐咨询)</a></p></li>
             </ul>
+        </div>
+    </script>
+
+    <script type="text/ng-template" id="alert">
+        <div class="ngdialog-message social-dialog-message">
+            <p>{{message}}</p>
         </div>
     </script>
 
