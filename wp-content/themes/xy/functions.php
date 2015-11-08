@@ -33,6 +33,7 @@ add_action('wp_ajax_nopriv_submit_contact_form', 'ajax_action_submit_contact_for
 add_action('wp_ajax_blog_list', 'ajax_action_blog_list');
 add_action('wp_ajax_nopriv_blog_list', 'ajax_action_blog_list');
 
+// 顾问
 function ajax_action_return_team_members() {
     $queryString = array(
         'post_type' => 'post',
@@ -52,6 +53,7 @@ function ajax_action_return_team_members() {
             'position_title' => get_field('position_title'),
             'college' => get_field('college'),
             'avatar' => get_field('avatar'),
+            'permalink' => get_permalink(),
             'desc' => get_the_content()
         );
     }
@@ -100,7 +102,8 @@ function ajax_action_blog_list() {
             'teaser' => get_the_content(null, true),
             'like' => get_field('like_count'),
             'comment' => get_field('comment_count'),
-            'author' => get_field('author')
+            'author' => get_field('author'),
+            'permalink' => get_permalink(),
         );
         $author = get_field('author');
         $blog['author'] = array(

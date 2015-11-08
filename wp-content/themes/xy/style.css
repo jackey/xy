@@ -697,13 +697,13 @@ body.ngdialog-open {
 }
 
 .contact .btn-fill {
-    background-color: #fff !important;
-    border: 1px solid #888;
-    color: #333 !important;
+    background-color: #fff;
+    border-color: #333;
     border-radius: 0px;
     height: 50px;
     outline: none !important;
     box-shadow: none !important;
+    color:#333;
 }
 
 #header .top {
@@ -967,10 +967,11 @@ input.active {
 
 .scroll-header #min-header {
     opacity: 1;
+    height: 60px;
 }
 
 #min-header {
-    height: 60px;
+    height: 0px;
     position: fixed;
     width: 100%;
     opacity: 0;
@@ -1081,6 +1082,9 @@ input.active {
 
 .blog-item-content .title {
     font-size: 16px;
+}
+
+.blog-item-content {
     color: #333;
 }
 
@@ -1123,8 +1127,8 @@ input.active {
 
 .single-post .avatar img{
     border-radius: 100px;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .single-post .author {
@@ -1147,13 +1151,11 @@ input.active {
 }
 
 .single-post .byname {
-    position: absolute;
-    top: -30px;
-    left: 50%;
     text-align: center;
     margin-left: -50px;
     width: 100px;
     height: 100px;
+    float: right;
 }
 
 .single-post .avatar  {
@@ -1248,5 +1250,182 @@ input.active {
 }
 
 .bnow {
-    transition: all 0.8s ease;
+    transition: opacity 0.8s ease;
+}
+
+.single-post .time {
+    float:right;
+}
+
+.single-post .entry-content {
+    margin-top: 60px;
+}
+
+.comment-reply-title {
+    font-size: 18px;
+    line-height: 200%;
+    color: #555;
+}
+
+p.logged-in-as {
+    font-size: 13px;
+}
+
+p.comment-form-comment > label {
+    display: none;
+}
+
+p.comment-form-comment #comment {
+    width: 100%;
+}
+
+p.form-submit .submit {
+    width: 150px;
+    height: 34px;
+    background: none;
+    border: 1px solid #888;
+    float: right;
+    margin-top: 23px;
+}
+
+p.form-submit .submit:hover {
+    background-color:#e77df5;
+    color:#fff;
+    border-color: #e77df5;
+}
+
+button.btn:hover {
+    background-color:#e77df5 !important;
+    color:#fff !important;
+    border-color: #e77df5 !important;
+}
+
+.comments-title {
+    display: none;
+}
+
+.comment-author .avatar{
+    display: inline-block;
+}
+
+.comment-author .fn {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.comment-author .says {
+    display: none;
+}
+
+.comment .commentmetadata {
+    display: none;
+}
+
+.comment-body > p {
+    line-height: 300%;
+}
+
+.comment .reply > a {
+    float:right;
+}
+
+.comment-list .comment:first-child {
+    margin-top: 80px;
+}
+
+.comment-list .comment {
+    margin-bottom: 25px;
+}
+
+:focus {
+    outline-color: #333;
+    outline-style: auto;
+    outline-width: 0px;
+}
+
+.fixed-right-sidebar {
+    position: fixed;
+    right: 5px;
+    top: 50%;
+    height: 200px;
+    margin-top: -100px;
+    width: 50px;
+}
+
+.link-item img {
+    width:100%;
+}
+
+.fixed-right-sidebar .link-item {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+.fixed-right-sidebar .link-item:hover i {
+    color:#fff;
+}
+
+.fixed-right-sidebar .links .link-item:first-child {
+    border-top: 1px solid #333;
+}
+
+.fixed-right-sidebar .links .link-item:hover {
+    background-color: #e77df5;
+    border:none;
+}
+
+.fixed-right-sidebar i{
+    color:#333;
+    font-size: 21px;
+}
+
+.fixed-right-sidebar span, .fixed-right-sidebar img {
+    display:none;
+}
+
+.fixed-right-sidebar .link-item:hover span {
+    height: 50px;
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    overflow: hidden;
+    width: 176px;
+    background-color: #e77df5;
+    text-align: center;
+    color: #fff;
+}
+
+.category-team_member .avatar {
+    float: left;
+    margin-right: 50px;
+}
+
+.category-team_member .avatar img{
+    width: 200px;
+    height: auto;
+    border-radius: 0px;
+}
+
+.category-team_member .blog-list > h2 {
+    text-align:left;
+}
+
+.l3 {
+    border-bottom: 1px solid #eee;
+    width: 80%;
+    margin-top: 68px;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width: 740px) {
+    body > #wrapper {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
 }

@@ -78,16 +78,18 @@
             <div class="row" >
                 <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="enter bottom, move 100px, over 1s">
                     <div class="member-info">
-                        <img ng-src="{{member['avatar']['url']}}" alt=""/>
+                        <a ng-href="{{member['permalink']}}">
+                            <img ng-src="{{member['avatar']['url']}}" alt=""/>
 
-                        <div class="bg"></div>
-                        <div class="desc">{{member['desc']}}</div>
-                        <div class="minfo">
-                            <i class="name">{{member['first_name']}} {{member['last_name']}}</i> <br/>
-                            <i class="school"> {{member['college']}}</i>
-                            <div class="line"></div>
-                            <i class="job-title">{{member['position_title']}}</i>
-                        </div>
+                            <div class="bg"></div>
+                            <div class="desc">{{member['desc']}}</div>
+                            <div class="minfo">
+                                <i class="name">{{member['first_name']}} {{member['last_name']}}</i> <br/>
+                                <i class="school"> {{member['college']}}</i>
+                                <div class="line"></div>
+                                <i class="job-title">{{member['position_title']}}</i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -100,7 +102,7 @@
             <i data-sr="wait 0s, ease-in-out 50px, over 1s">携隱CEO</i>
 
             <p data-sr="wait 0s, ease-in-out 50px, over 1s">"在国内大概每年有一百万学生申请MAB 通过率仅20% 我们的使命是帮助中国学生有效申请..."</p>
-            <button data-sr="wait 0s, ease-in-out 50px, over 1s" class="btn btn-readblog">阅读更多</button>
+            <button data-sr="wait 0s, ease-in-out 50px, over 1s" ng-click="goto('<?php echo get_page_link(7)?>')" class="btn btn-readblog">阅读更多</button>
         </div>
     </div>
 

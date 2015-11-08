@@ -230,7 +230,6 @@
             TeamMember.then(function (members) {
                 angular.forEach(members, function (member) {
                     $scope.members.push(member);
-
                 })
             });
 
@@ -275,6 +274,10 @@
                         $element.prop('disable', false);
                     });
             };
+
+            $scope.goto = function (link) {
+                window.location.href = link;
+            }
     }]);
 
     angular.element(document).ready(function () {
