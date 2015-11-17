@@ -8,152 +8,222 @@
 
     <div id="main" data-scroll-header>
     <div id="content">
-    <div class="container btype" >
-        <div class="row section">
-            <h2 data-sr="ease-in-out, over 1s, wait 0.5s">咨询范围</h2>
-            <div class="line3"></div>
-            <p data-sr="ease in out, over 1s, wait 0.5s">" 我们帮您设计完善的进度目标 "</p>
-            <div class="row">
-                <div class="business-intro mba odd clearfix" >
-                    <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                        <p>MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 </p>
-                    </div>
-                    <div class="teaser" ng-mouseover="businessHover($event)" data-sr="enter left, move 100px, over 1s, wait 0.5s">
-                        <div class="bg"></div>
-                        <h3><i class="fa fa-bank"></i><span>MBA</span></h3>
-                        <p>MBA 联系 联系 我们</p>
-                        <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="business-intro ms even">
-                    <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
-                        <p>MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询</p>
-                    </div>
-                    <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                        <div class="bg"></div>
-                        <h3><i class="fa fa-graduation-cap"></i><span>MS</span></h3>
-                        <p>MBA 联系 联系 我们</p>
-                        <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="business-intro odd gmat">
-                    <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                        <p>GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试</p>
-                    </div>
-                    <div class="teaser" data-sr="enter  left, move 100px, over 1s, wait 0.5s">
-                        <div class="bg"></div>
-                        <h3><i class="fa fa-pencil"></i><span>GMAT</span></h3>
-                        <p>MBA 联系 联系 我们</p>
-                        <a href="<?php echo get_permalink('45')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="business-intro toefl even">
-                    <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
-                        <p>TOEFL 考试 TOEFL 考试 TOEFL 考试 TOEFL 考试</p>
-                    </div>
-                    <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                        <div class="bg"></div>
-                        <h3><i class="fa fa-slack"></i><span>TOEFL</span></h3>
-                        <p>MBA 联系 联系 我们</p>
-                        <a href="<?php echo get_permalink('47')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
-                    </div>
-                </div>
+        <div class="container main-banner">
+            <div class="row section">
+                <h1>携隐咨询</h1>
+                <p>让我们团队帮助您申请国外大学</p>
+                <div class="img-bg"></div>
             </div>
         </div>
-    </div>
-
-    <div class="container team">
-        <div class="row section">
-            <h2 data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们的团队</h2>
-
-            <div class="line3"></div>
-            <p data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们帮您定位完善的目标方式</p>
-
-            <div class="row" >
-                <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="enter bottom, move 100px, over 1s">
-                    <div class="member-info">
-                        <a ng-href="{{member['permalink']}}">
-                            <img ng-src="{{member['avatar']['url']}}" alt=""/>
-
-                            <div class="bg"></div>
-                            <div class="desc">{{member['desc']}}</div>
-                            <div class="minfo">
-                                <i class="name">{{member['first_name']}} {{member['last_name']}}</i> <br/>
-                                <i class="school"> {{member['college']}}</i>
-                                <div class="line"></div>
-                                <i class="job-title">{{member['position_title']}}</i>
-                            </div>
+        <div class="container business-types">
+            <div class="row section">
+                <h1>考试升学咨询</h1>
+                <div class="items clearfix">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>MBA</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
                         </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>MS</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>GMAT</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>TOEFL</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>往期</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>往期</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>往期</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="img-bg"></div>
+                            <h2>往期</h2>
+                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+        <div class="container btype" style="display: none;">
+            <div class="row section">
+                <h2 data-sr="ease-in-out, over 1s, wait 0.5s">咨询范围</h2>
+                <div class="line3"></div>
+                <p data-sr="ease in out, over 1s, wait 0.5s">" 我们帮您设计完善的进度目标 "</p>
+                <div class="row">
+                    <div class="business-intro mba odd clearfix" >
+                        <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
+                            <p>MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 </p>
+                        </div>
+                        <div class="teaser" ng-mouseover="businessHover($event)" data-sr="enter left, move 100px, over 1s, wait 0.5s">
+                            <div class="bg"></div>
+                            <h3><i class="fa fa-bank"></i><span>MBA</span></h3>
+                            <p>MBA 联系 联系 我们</p>
+                            <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="business-intro ms even">
+                        <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
+                            <p>MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询</p>
+                        </div>
+                        <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
+                            <div class="bg"></div>
+                            <h3><i class="fa fa-graduation-cap"></i><span>MS</span></h3>
+                            <p>MBA 联系 联系 我们</p>
+                            <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="business-intro odd gmat">
+                        <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
+                            <p>GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试</p>
+                        </div>
+                        <div class="teaser" data-sr="enter  left, move 100px, over 1s, wait 0.5s">
+                            <div class="bg"></div>
+                            <h3><i class="fa fa-pencil"></i><span>GMAT</span></h3>
+                            <p>MBA 联系 联系 我们</p>
+                            <a href="<?php echo get_permalink('45')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="business-intro toefl even">
+                        <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
+                            <p>TOEFL 考试 TOEFL 考试 TOEFL 考试 TOEFL 考试</p>
+                        </div>
+                        <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
+                            <div class="bg"></div>
+                            <h3><i class="fa fa-slack"></i><span>TOEFL</span></h3>
+                            <p>MBA 联系 联系 我们</p>
+                            <a href="<?php echo get_permalink('47')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container blog" >
-        <div class="row section">
-            <div class="icon people-ceo"><img data-sr="wait 0s, ease-in-out 50px, over 1s" src="<?php echo esc_url(get_template_directory_uri()) . '/misc/melody.jpg' ?>" alt=""/></div>
-            <i data-sr="wait 0s, ease-in-out 50px, over 1s">携隱CEO</i>
+        <div class="container team" style="display: none;">
+            <div class="row section">
+                <h2 data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们的团队</h2>
 
-            <p data-sr="wait 0s, ease-in-out 50px, over 1s">"在国内大概每年有一百万学生申请MAB 通过率仅20% 我们的使命是帮助中国学生有效申请..."</p>
-            <button data-sr="wait 0s, ease-in-out 50px, over 1s" ng-click="goto('<?php echo get_page_link(7)?>')" class="btn btn-readblog">阅读更多</button>
-        </div>
-    </div>
+                <div class="line3"></div>
+                <p data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们帮您定位完善的目标方式</p>
 
-    <div class="container contact" data-sr="">
-        <div class="row section">
-            <p>" 联系我们, 让我们帮您一起完善目标 " </p>
-            <div class="row">
-                <form class="form-horizontal" action="">
-                    <div class="form-group">
-                        <label class=" sr-only " for="name">姓名: </label>
+                <div class="row" >
+                    <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="enter bottom, move 100px, over 1s">
+                        <div class="member-info">
+                            <a ng-href="{{member['permalink']}}">
+                                <img ng-src="{{member['avatar']['url']}}" alt=""/>
 
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <input ng-class="{active: nameFocused}" ng-init="nameFocused=false" ng-focus="nameFocused=true" ng-blur="nameFocused=false" ng-model="name" type="text" class="form-control" placeholder="请输入您的姓名" name="name" id="name"/>
+                                <div class="bg"></div>
+                                <div class="desc">{{member['desc']}}</div>
+                                <div class="minfo">
+                                    <i class="name">{{member['first_name']}} {{member['last_name']}}</i> <br/>
+                                    <i class="school"> {{member['college']}}</i>
+                                    <div class="line"></div>
+                                    <i class="job-title">{{member['position_title']}}</i>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class=" sr-only " for="email">邮箱: </label>
-
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <input ng-class="{active: emailFocused}" ng-init="emailFocused=false" ng-focus="emailFocused=true" ng-blur="emailFocused=false" ng-model="email" type="text" class="form-control" placeholder="请输入您的邮箱" name="email" id="email"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="phone">手机:</label>
-
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <input ng-class="{active: phoneFocused}" ng-init="phoneFocused=false" ng-focus="phoneFocused=true" ng-blur="phoneFocused=false" ng-model="phone" type="text" class="form-control" placeholder="请输入您的手机号码 方便我们联系到您" name="email"
-                                   id="email"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class=" sr-only " for="target">关注: </label>
-
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                            <select ng-model="type" class="form-control" name="type" id="type">
-                                <option value="mba">MBA</option>
-                                <option value="ms">MS</option>
-                                <option value="gmat">GAMT</option>
-                                <option value="toefl">TOEFL</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                            <button class="btn btn-primary btn-fill" ng-click="submitContactForm($event)"><span class="bnow">发送</span><span class="bold">发送成功</span></button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div class="container blog" >
+            <div class="row section">
+                <div class="icon people-ceo"><img data-sr="wait 0s, ease-in-out 50px, over 1s" src="<?php echo esc_url(get_template_directory_uri()) . '/misc/melody.jpg' ?>" alt=""/></div>
+                <i data-sr="wait 0s, ease-in-out 50px, over 1s">携隱CEO</i>
+
+                <p data-sr="wait 0s, ease-in-out 50px, over 1s">"在国内大概每年有一百万学生申请MAB 通过率仅20% 我们的使命是帮助中国学生有效申请..."</p>
+                <button data-sr="wait 0s, ease-in-out 50px, over 1s" ng-click="goto('<?php echo get_page_link(7)?>')" class="btn btn-readblog">阅读更多</button>
+            </div>
+        </div>
+
+        <div class="container contact" data-sr="">
+            <div class="row section">
+                <p>" 注册您的账号, 让我们帮您一起完善目标 " </p>
+                <div class="row">
+                    <form class="form-horizontal" action="">
+                        <div class="form-group">
+                            <label class=" sr-only " for="name">姓名: </label>
+
+                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                                <input ng-class="{active: nameFocused}" ng-init="nameFocused=false" ng-focus="nameFocused=true" ng-blur="nameFocused=false" ng-model="name" type="text" class="form-control" placeholder="请输入您的姓名" name="name" id="name"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" sr-only " for="email">邮箱: </label>
+
+                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                                <input ng-class="{active: emailFocused}" ng-init="emailFocused=false" ng-focus="emailFocused=true" ng-blur="emailFocused=false" ng-model="email" type="text" class="form-control" placeholder="请输入您的邮箱" name="email" id="email"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="phone">手机:</label>
+
+                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                                <input ng-class="{active: phoneFocused}" ng-init="phoneFocused=false" ng-focus="phoneFocused=true" ng-blur="phoneFocused=false" ng-model="phone" type="text" class="form-control" placeholder="请输入您的手机号码 方便我们联系到您" name="email"
+                                       id="email"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" sr-only " for="target">关注: </label>
+
+                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
+                                <select ng-model="type" class="form-control" name="type" id="type">
+                                    <option value="mba">MBA</option>
+                                    <option value="ms">MS</option>
+                                    <option value="gmat">GAMT</option>
+                                    <option value="toefl">TOEFL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                                <button class="btn btn-primary btn-fill" ng-click="submitContactForm($event)"><span class="bnow">发送</span><span class="bold">发送成功</span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <?php get_sidebar(); ?>

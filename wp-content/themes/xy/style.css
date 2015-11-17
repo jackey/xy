@@ -632,6 +632,7 @@ body.ngdialog-open {
     width: 100px;
     height: 100px;
     display: inline-block;
+    margin-top: 78px;
 }
 
 .blog .section i {
@@ -1419,6 +1420,100 @@ button.btn:hover {
     width: 80%;
     margin-top: 68px;
 }
+
+.main-banner .section{
+    padding-top: 90px;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 29px;
+    font-weight: lighter;
+}
+
+.main-banner .img-bg {
+    height: 300px;
+    background-image: url(misc/hero-image.png);
+    background-size: 100% auto;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.business-types {
+    background-color: #e8e8e8;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.business-types li {
+    width: 25%;
+    float: left;
+    list-style-type: none;
+}
+
+.business-types li a {
+    display: block;
+    text-align: center;
+}
+
+.business-types a:hover {
+    text-decoration: none;
+    background-color: #878787;
+}
+
+.business-types .img-bg {
+    height: 70px;
+    width: 70px;
+    background-image: url(misc/icon-ebook.svg);
+    background-size: 100% auto;
+    background-position: center center;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.business-types a:hover .img-bg {
+    background-image: url(misc/icon-ebook-white.svg);
+}
+
+.business-types a:hover h2 {
+    color:#fff;
+}
+
+.business-types a:hover p {
+    color: #fff;
+}
+
+.business-types h2 {
+    color:#333;
+    text-align: center;
+    line-height: 300%;
+}
+
+#content .business-types {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    background-color: #fff;
+}
+
+#content .business-types h1 {
+    line-height: 600%;
+    padding-top: 50px;
+}
+
+.business-types p {
+    font-size: 13px;
+    color: #383838;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-banner p {
+    padding-top: 25px;
+}
+
 
 
 /* Mobile */
