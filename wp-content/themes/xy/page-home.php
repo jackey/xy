@@ -12,13 +12,13 @@
             <div class="row section">
                 <h1>携隐咨询</h1>
                 <p>让我们团队帮助您申请国外大学</p>
-                <div class="img-bg"></div>
+                <div class="img-bg" data-sr="ease-in-out, over 1s, wait 0.5s"></div>
             </div>
         </div>
         <div class="container business-types">
             <div class="row section">
                 <h1>考试升学咨询</h1>
-                <div class="items clearfix">
+                <div class="items clearfix" data-sr="ease-in-out, over 1s, wait 0.5s">
                     <li>
                         <a href="javascript:void(0)">
                             <div class="img-bg"></div>
