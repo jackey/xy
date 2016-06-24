@@ -29,24 +29,6 @@
             </div>
         </div>
 
-        <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=ZuVRDtLTr1PXxz7g028BUPYL"></script>
-        <script type="text/javascript">
-            // 百度地图API功能
-            var map = new BMap.Map("allmap");
-            var point = new BMap.Point(121.445431,31.2484185);
-            map.centerAndZoom(point, 19);
-            var marker = new BMap.Marker(point);
-            map.addOverlay(marker);
-
-            marker.addEventListener('click', function () {
-                var infoWindow = new BMap.InfoWindow("上海长寿路360号源达大厦2113", {
-                    width:250,
-                    height:100,
-                    title: '携隐信息咨询（上海）有限公司'
-                });
-                map.openInfoWindow(infoWindow, point);
-            });
-        </script>
 
     </div>
 

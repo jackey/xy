@@ -208,6 +208,16 @@
                 window.sr = new scrollReveal();
             };
 
+            $scope.comingSoon = function ($event) {
+                //$event.preventDefault();
+                //$ngDialog.open({
+                //    template: 'contactSocialTpl',
+                //    plain: false,
+                //    controller: 'XYController',
+                //    scope: $scope
+                //});
+            }
+
             $scope.showContactSocialPopup = function ($event) {
                 $event.preventDefault();
                 $ngDialog.open({
@@ -281,6 +291,115 @@
     }]);
 
     angular.element(document).ready(function () {
+        $(function(){
+            $('.reasonCircle').corner('50px');
+
+            $('div.navMobile').click(function(){
+                var stu = $(this).children('ul').css('display');
+                if (stu == 'none') {
+                    $(this).children('ul').css('display','block');
+                    return false;
+                }else{
+                    $(this).children('ul').css('display','none');
+                }
+            });
+
+            $(function(){
+
+                var width1,showNum,ulWidth;
+                var obj = $('.slideFrame').children('ul');
+                var num = obj.children('li').length;
+
+                function changeScreen(){
+                    var widthScreen = $(window).width();
+                    if (widthScreen > 768) {
+                        liWidth('pc');
+                    }else if(widthScreen <= 375){
+                        liWidth('moblie');
+                    }else{
+                        liWidth('ipad');
+                    }
+                }
+                function liWidth(type){
+                    width1 = parseInt($('.slideFrame').css('width'));
+                    switch(type){
+                        case 'pc':
+                            showNum = 5;
+                            width1 = width1/5-1;
+                            break;
+                        case 'moblie':
+                            width1 = width1/2-1;
+                            $('.counselor .slideFrame ul').css('left',-width1*0.5);  //初始left设置
+                            ulWidth = width1*num;
+                            $('.slideFrame ul').css('width',ulWidth+'px');
+                            $('.slideFrame').css('overflow-x','auto');
+                            $(".counselor .slideFrame").scroll(function() {  //滚动启动时left清0
+                                $('.counselor .slideFrame ul').css('left',0);
+                            });
+                            break;
+                        default:
+                            showNum = 3;
+                            width1 = width1/3-4;
+                    }
+                    $('.slideFrame ul li').css('width',width1+'px');
+                }
+                changeScreen();
+                $(window).resize(function() {
+                    changeScreen();
+                });
+
+                //按钮事件
+                $('div.prevBtn').click(function(){
+                    var obj = $(this).siblings('.slideFrame').children('ul');
+                    var num = obj.children('li').length;
+                    var width = parseInt(obj.css('width'));
+                    var left = parseInt(obj.css('left'));
+                    if (left < 0) {
+                        left = left+width1;
+                        obj.css('left',left+'px');
+                    };
+                });
+
+                $('div.nextBtn').click(function(){
+                    var width = parseInt(obj.css('width'));
+                    var left = parseInt(obj.css('left'));
+                    var allowWidth = -((num-showNum)*width1-10);
+                    if (left > allowWidth) {
+                        left = left-width1;
+                        obj.css('left',left+'px');
+                    };
+                });
+
+                $('a[href^="/#/"]').click(function(){
+                    console.log('click');
+                    var the_id = $(this).attr("href").replace('/#/', '');
+                    if ($('#'+the_id).size()) {
+                        $('html, body').animate({
+                            scrollTop:$('#' + the_id).offset().top
+                        }, 'slow');
+                    }
+                });
+
+                var hash = window.location.hash;
+                $('a[href="/'+hash+'"]').trigger('click');
+
+
+                $(function(){
+                    $('.tanframeRight,.tanframeLeft').corner('25px');
+                    $('.reasonCircle').corner('50px');
+
+                    $('.consultantList .consultantImg').click(function(){
+                        $(this).parents('body').find('div.shade').css('display','block');
+                        $(this).parents('body').find('div.popup_frame').css('display','block');
+                    });
+
+                    $('.shade,.closeBtn').click(function(){
+                        $(this).parents('body').find('div.shade').css('display','none');
+                        $(this).parents('body').find('div.popup_frame').css('display','none');
+                    });
+                });
+            });
+        });
         angular.bootstrap(document, ['xy']);
     });
 });

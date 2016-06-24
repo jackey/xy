@@ -2,11 +2,11 @@
 <html <?php language_attributes(); ?> class="no-js">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <meta name="viewport" content="width=device-width /">
+    <meta name="viewport" content="width=device-width" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/styles/bootstrap.css"/>
-    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/styles/font-awesome.css"/>
-    <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url')?>"/>
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/styles/reset.css"/>
+  <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/styles/swiper.min.css"/>
+    <link rel="stylesheet" href="<?php echo bloginfo('template_url'); ?>/styles/style.css"/>
     <!--[if lt IE 9]>
     <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/scripts/html5.js"></script>
     <![endif]-->
@@ -35,25 +35,52 @@
         </div>
     </script>
 </head>
-<body <?php body_class(); ?> ng-controller="XYController" data-image-preload style="opacity: 0">
-<div id="wrapper">
-    <div id="header">
-        <div class="container" data-sr="wait 0s, over 1s">
-            <div class="row">
-                <div class="top">
-                    <div class="delimiter"></div>
-                    <a class="logo" href="">
-                        <img src="<?php echo esc_url(get_template_directory_uri())?>/misc/logo.png" alt=""/>
-                    </a>
-                </div>
-            </div>
-            <?php wp_nav_menu(array('theme_location' => 'main-nav', 'container_class' => 'main-nav'))?>
-        </div>
+<body ng-controller="XYController" data-image-preload style="opacity: 0">
+
+
+<div class="<?php if (get_the_ID() == 2) echo "header";?> commonNav">
+  <div class="container">
+    <div class="row nav">
+      <div class="navPc">
+        <ul>
+          <li><a href="<?php echo get_page_link(2);?>">首页</a></li>
+          <li><a href="/#/service">服务</a></li>
+          <li><a href="/#/consulting-team">顾问团队</a></li>
+        </ul>
+        <ul class=" right">
+          <li><a href="<?php echo get_page_link(7)?>">Blogs</a></li>
+          <li><a ng-click="comingSoon($event)">近期活动</a></li>
+          <li class="margin0"><a href="">联系我们</a></li>
+        </ul>
+      </div>
+      <div class="navMobile">
+        <div><i></i><i></i><i></i></div>
+        <ul>
+          <li><a href="<?php echo get_page_link(2);?>">首页</a></li>
+          <li><a href="/#/service">服务</a></li>
+          <li><a href="/#/consulting-team">顾问团队</a></li>
+          <li><a href="<?php echo get_page_link(7)?>">Blogs</a></li>
+          <li><a ng-click="comingSoon($event)">近期活动</a></li>
+          <li><a href="">联系我们</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div id="min-header">
-        <div class="logo">
-            <img src="<?php echo esc_url(get_template_directory_uri())?>/misc/logo.png" alt=""/>
+    <?php if (get_the_ID() == 2): ?>
+      <div class="row headerContent tc">
+        <div class="logo"><img src="<?php echo bloginfo('template_url')?>/images/logo.jpg" alt=""></div>
+        <div class="word_1">
+          <p class="word_1_1">说出属于你的，独一无二的故事</p>
+          <p class="word_1_1 word_1_1_1">说出属于你的<br />独一无二的故事</p>
+          <p class="word_1_2">所有关于留学考试，留学申请，职业发展的问题，你都可以在这里找到答案</p>
         </div>
-        <?php wp_nav_menu(array('theme_location' => 'main-nav', 'container_class' => 'main-nav'))?>
-    </div>
+
+        <div class="iconBtn cur"></div>
+      </div>
+    <?php endif;?>
+  </div>
+</div>
+
+<?php if (get_the_ID() <> 2) :?>
+
+<?php endif;?>

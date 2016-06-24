@@ -5,227 +5,211 @@
 ?>
 
 <?php get_header(); ?>
-
-    <div id="main" data-scroll-header>
-    <div id="content">
-        <div class="container main-banner">
-            <div class="row section">
-                <h1>携隐咨询</h1>
-                <p>让我们团队帮助您申请国外大学</p>
-                <div class="img-bg" data-sr="ease-in-out, over 1s, wait 0.5s"></div>
-            </div>
-        </div>
-        <div class="container business-types">
-            <div class="row section">
-                <h1>考试升学咨询</h1>
-                <div class="items clearfix" data-sr="ease-in-out, over 1s, wait 0.5s">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>MBA</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>MS</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>GMAT</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>TOEFL</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>往期</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>往期</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>往期</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <div class="img-bg"></div>
-                            <h2>往期</h2>
-                            <p>MBA 考试我们从学校选择 入学考试等帮您个性化定制</p>
-                        </a>
-                    </li>
-                </div>
-            </div>
-        </div>
-        <div class="container btype" style="display: none;">
-            <div class="row section">
-                <h2 data-sr="ease-in-out, over 1s, wait 0.5s">咨询范围</h2>
-                <div class="line3"></div>
-                <p data-sr="ease in out, over 1s, wait 0.5s">" 我们帮您设计完善的进度目标 "</p>
-                <div class="row">
-                    <div class="business-intro mba odd clearfix" >
-                        <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                            <p>MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 MBA 申请咨询 </p>
-                        </div>
-                        <div class="teaser" ng-mouseover="businessHover($event)" data-sr="enter left, move 100px, over 1s, wait 0.5s">
-                            <div class="bg"></div>
-                            <h3><i class="fa fa-bank"></i><span>MBA</span></h3>
-                            <p>MBA 联系 联系 我们</p>
-                            <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="business-intro ms even">
-                        <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
-                            <p>MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询 MS 申请咨询</p>
-                        </div>
-                        <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                            <div class="bg"></div>
-                            <h3><i class="fa fa-graduation-cap"></i><span>MS</span></h3>
-                            <p>MBA 联系 联系 我们</p>
-                            <a href="mail:jackey@fumer.cn&titlte=MBA咨询"><span>Email 联系 <br/> <br/> Email 联系</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="business-intro odd gmat">
-                        <div class="intro" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                            <p>GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试 GMAT 考试</p>
-                        </div>
-                        <div class="teaser" data-sr="enter  left, move 100px, over 1s, wait 0.5s">
-                            <div class="bg"></div>
-                            <h3><i class="fa fa-pencil"></i><span>GMAT</span></h3>
-                            <p>MBA 联系 联系 我们</p>
-                            <a href="<?php echo get_permalink('45')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="business-intro toefl even">
-                        <div class="intro" data-sr="enter left, move 100px, over 1s, wait 0.5s">
-                            <p>TOEFL 考试 TOEFL 考试 TOEFL 考试 TOEFL 考试</p>
-                        </div>
-                        <div class="teaser" data-sr="enter right, move 100px, over 1s, wait 0.5s">
-                            <div class="bg"></div>
-                            <h3><i class="fa fa-slack"></i><span>TOEFL</span></h3>
-                            <p>MBA 联系 联系 我们</p>
-                            <a href="<?php echo get_permalink('47')?>"><span>阅读详情 <br/> <br/> 阅读详情</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container team" style="display: none;">
-            <div class="row section">
-                <h2 data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们的团队</h2>
-
-                <div class="line3"></div>
-                <p data-sr="wait 0.5s, ease-in-out 1s, over 1s">我们帮您定位完善的目标方式</p>
-
-                <div class="row" >
-                    <div ng-repeat="member in members" class="col-xs-12 col-sm-4 col-md-3" data-sr="enter bottom, move 100px, over 1s">
-                        <div class="member-info">
-                            <a ng-href="{{member['permalink']}}">
-                                <img ng-src="{{member['avatar']['url']}}" alt=""/>
-
-                                <div class="bg"></div>
-                                <div class="desc">{{member['desc']}}</div>
-                                <div class="minfo">
-                                    <i class="name">{{member['first_name']}} {{member['last_name']}}</i> <br/>
-                                    <i class="school"> {{member['college']}}</i>
-                                    <div class="line"></div>
-                                    <i class="job-title">{{member['position_title']}}</i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container blog" >
-            <div class="row section">
-                <div class="icon people-ceo"><img data-sr="wait 0s, ease-in-out 50px, over 1s" src="<?php echo esc_url(get_template_directory_uri()) . '/misc/melody.jpg' ?>" alt=""/></div>
-                <i data-sr="wait 0s, ease-in-out 50px, over 1s">携隱CEO</i>
-
-                <p data-sr="wait 0s, ease-in-out 50px, over 1s">"在国内大概每年有一百万学生申请MAB 通过率仅20% 我们的使命是帮助中国学生有效申请..."</p>
-                <button data-sr="wait 0s, ease-in-out 50px, over 1s" ng-click="goto('<?php echo get_page_link(7)?>')" class="btn btn-readblog">阅读更多</button>
-            </div>
-        </div>
-
-        <div class="container contact" data-sr="">
-            <div class="row section">
-                <p>" 注册您的账号, 让我们帮您一起完善目标 " </p>
-                <div class="row">
-                    <form class="form-horizontal" action="">
-                        <div class="form-group">
-                            <label class=" sr-only " for="name">姓名: </label>
-
-                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                                <input ng-class="{active: nameFocused}" ng-init="nameFocused=false" ng-focus="nameFocused=true" ng-blur="nameFocused=false" ng-model="name" type="text" class="form-control" placeholder="请输入您的姓名" name="name" id="name"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class=" sr-only " for="email">邮箱: </label>
-
-                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                                <input ng-class="{active: emailFocused}" ng-init="emailFocused=false" ng-focus="emailFocused=true" ng-blur="emailFocused=false" ng-model="email" type="text" class="form-control" placeholder="请输入您的邮箱" name="email" id="email"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="phone">手机:</label>
-
-                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                                <input ng-class="{active: phoneFocused}" ng-init="phoneFocused=false" ng-focus="phoneFocused=true" ng-blur="phoneFocused=false" ng-model="phone" type="text" class="form-control" placeholder="请输入您的手机号码 方便我们联系到您" name="email"
-                                       id="email"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class=" sr-only " for="target">关注: </label>
-
-                            <div class="col-sm-8 col-sm-offset-2 col-xs-12">
-                                <select ng-model="type" class="form-control" name="type" id="type">
-                                    <option value="mba">MBA</option>
-                                    <option value="ms">MS</option>
-                                    <option value="gmat">GAMT</option>
-                                    <option value="toefl">TOEFL</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                                <button class="btn btn-primary btn-fill" ng-click="submitContactForm($event)"><span class="bnow">发送</span><span class="bold">发送成功</span></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <div class="container service" id="service">
+    <div class="row tc">
+      <h3>我们的服务</h3>
+      <p class="h3_1">SERVICES</p>
     </div>
 
-    <?php get_sidebar(); ?>
+    <div class="row tc">
+      <div class="col-4 borderRight"><p class="artWord master">Master</p></div>
+      <div class="col-4 borderRight"><p class="artWord mba">MBA</p></div>
+      <div class="col-4"><p class="artWord colleage">Colleage</p></div>
+      <div class="col-4 borderRight borderTop">
+        <p class="artWord toefl">TOEFL</p>
+        <p class="toefl">即将推出</p>
+      </div>
+      <div class="col-4 borderRight borderTop">
+        <p class="artWord gmat">GMAT</p>
+      </div>
+      <div class="col-4 borderTop">
+        <p class="artWord gre">GRE</p>
+        <p class="gre">即将推出</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="reason">
+    <div class="row">
+      <div class="reasonTitleMobile tc">
+        <h3>选择携隐的理由</h3>
+        <p class="h3_1">WHY US</p>
+      </div>
+      <div class="col-4 reason1">
+        <div class="reasonCircle"><i></i></div>
+        <p class="reasonTitle2">流程</p>
+        <p class="reasonTitle3">先了解顾问，再确定合作 <br>每一步都有规划和指引</p>
+      </div>
+      <div class="col-4 reason2">
+        <div class="reasonTitle">
+          <h3>选择携隐的理由</h3>
+          <p class="h3_1">WHY US</p>
+        </div>
+        <div class="reasonCircle"><i></i></div>
+        <p class="reasonTitle2">团队</p>
+        <p class="reasonTitle3">我们是一群顶尖学校的毕业生 <br>有经验的顾问，最重要的是We Care</p>
+      </div>
+      <div class="col-4 reason3">
+        <div class="reasonCircle"><i></i></div>
+        <p class="reasonTitle2">价值</p>
+        <p class="reasonTitle3">考试/申请不仅仅是一个结果 <br>我们会和你一起享受成长的过程</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container case">
+    <div class="row tc">
+      <div class="col-6">
+        <h3>我们的申请结果</h3>
+        <p class="h3_1">RESULTS</p>
+        <div class="registerResult">
+          <p><span>2015-2016</span>申请季，申请人数：30人</p>
+          <div class="row">
+            <ul>
+              <li class="col-4"><span class="caseWord1">23</span><br><span class="caseWord2">ACCECPTED</span></li>
+              <li class="col-4"><span class="caseWord1">4</span><br><span class="caseWord2">WAITLIST</span></li>
+              <li class="col-4"><span class="caseWord1">2</span><br><span class="caseWord2">DING</span></li>
+              <li class="col-2" style="height:100px;"></li>
+              <li class="col-3"><span class="caseWord1">3</span><br><span class="caseWord2">全奖奖学金</span></li>
+              <li class="col-2" style="height:100px;"></li>
+              <li class="col-3"><span class="caseWord1">15</span><br><span class="caseWord2">部分奖学金</span></li>
+              <li class="col-2" style="height:100px;"></li>
+            </ul>
+          </div>
+
+          <a class="floorBtn" href="###">申请结果分析</a>
+        </div>
+      </div>
+      <div class="col-6 caseMobile">
+        <h3>我们的成功案例</h3>
+        <p class="h3_1">SUCCESSFUL CASES</p>
+        <div class="successfulCase">
+          <p>从全军覆没到百发百中到百发百中从全军 <br><span>Master</span></p>
+          <p>从全军覆没到百发百中到百发百中从全军到百发百中从全军 <br><span>MBA</span></p>
+          <p>从全军覆没到百发百中到百发百中 <br><span>Colleage</span></p>
+          <p>从全军覆没到百发百中到百发百中从全军到百发百中从 <br><span>GMAT</span></p>
+          <p>从全军覆没到百发百中到百发百中从全军 <br><span>Master</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container counselor" id="consulting-team">
+    <div class="row tc">
+      <div class="col-12">
+        <h3>我们的顾问</h3>
+        <p class="h3_1">Consultant</p>
+      </div>
+    </div>
+
+    <div class="row warpSlide tc">
+      <div class="col-12">
+        <div class="slideFrame">
+          <ul id="slider" class="clearfix">
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_1.jpg" alt=""></div>
+              <div class="identity"><p class="name">Melody Zhang</p><br><p class="date">MBA 2012</p></div>
+            </li>
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_2.jpg" alt=""></div>
+              <div class="identity"><p class="name">Lindsay Cui</p><br><p class="date">MBA 2012</p></div>
+            </li>
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_3.jpg" alt=""></div>
+              <div class="identity"><p class="name">Lindsay Cui</p><br><p class="date">MBA 2012</p></div>
+            </li>
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_4.jpg" alt=""></div>
+              <div class="identity"><p class="name">Lindsay Cui</p><br><p class="date">MBA 2012</p></div>
+            </li>
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_5.jpg" alt=""></div>
+              <div class="identity"><p class="name">Lindsay Cui</p><br><p class="date">MBA 2012</p></div>
+            </li>
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_6.jpg" alt=""></div>
+              <div class="identity"><p class="name">Lindsay Cui</p><br><p class="date">MBA 2012</p></div>
+            </li>
+            <li>
+              <div class="consultantImg"><img src="<?php echo bloginfo('template_url')?>/images/consultant_7.jpg" alt=""></div>
+              <div class="identity"><p class="name">Lindsay Cui</p><br><p class="date">MBA 2012</p></div>
+            </li> <!-- -->
+          </ul>
+        </div>
+        <div class="prevBtn"></div>
+        <div class="nextBtn"></div>
+      </div>
+      <a class="floorBtn" href="<?php echo get_page_link(56)?>">查看全部</a>
+    </div>
+  </div>
+  <script>
+
+
+  </script>
+
+  <div class="container ganhuo">
+    <div class="row tc">
+      <h3>我们的干货</h3>
+      <p class="h3_1">BLOG</p>
+      <div class="col-4 ganhuo1">
+        <dl>
+          <dd><img src="<?php echo bloginfo('template_url')?>/images/ganhuo_1.png" alt=""><span>GMAT</span></dd>
+          <dt>
+          <p>CARGO</p>
+          <span>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.<br /> Donec in blandit dolor. Vivamus a fringilla lorem</span>
+          </dt>
+        </dl>
+      </div>
+      <div class="col-4 ganhuo2">
+        <dl>
+          <dd><img src="<?php echo bloginfo('template_url')?>/images/ganhuo_2.png" alt=""><span>MBA</span></dd>
+          <dt>
+          <p>LOGISTIC SERVICES</p>
+          <span>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.<br /> Donec in blandit dolor. Vivamus a fringilla lorem</span>
+          </dt>
+        </dl>
+      </div>
+      <div class="col-4 ganhuo3">
+        <dl>
+          <dd><img src="<?php echo bloginfo('template_url')?>/images/ganhuo_3.png" alt=""><span>MS</span></dd>
+          <dt>
+          <p>STORAGE</p>
+          <span>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.<br /> Donec in blandit dolor. Vivamus a fringilla lorem</span>
+          </dt>
+        </dl>
+      </div>
+
+      <a class="floorBtn" href="###">查看全部</a>
+    </div>
+  </div>
+
+  <div class="container activities ">
+    <div class="row tc">
+      <div class="col-12">
+        <h3>我们的活动</h3>
+        <p class="h3_1">ACTIVITIES</p>
+      </div>
+
+      <div class="activitiesFrame activitiesFrame1 col-6">
+        <div>
+          <p class="activitiesWord1">Phasellus bibendum semper lectus, in ornare erat tempus eget</p>
+          <p class="activitiesWord2">Anim pariatur cliche reprehenderit, 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+          <p class="activitiesWord3">12th Feb, 2107</p>
+        </div>
+      </div>
+      <div class="activitiesFrame activitiesFrame2 col-6">
+        <div>
+          <p class="activitiesWord1">Phasellus bibendum semper lectus, in ornare erat tempus eget</p>
+          <p class="activitiesWord2">Anim pariatur cliche reprehenderit, 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
+          <p class="activitiesWord3">12th Feb, 2107</p>
+        </div>
+      </div>
+
+      <a class="floorBtn" href="###">查看全部</a>
+    </div>
+  </div>
+
 
 <?php get_footer() ?>
