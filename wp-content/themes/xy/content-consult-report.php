@@ -22,7 +22,7 @@
 </div>
 
 <div class="container blogContent">
-  <div class="blogSlide"><img src="images/blog-detail_slide.jpg" alt=""></div>
+  <div class="blogSlide"><img src="<?php echo bloginfo('template_url')?>/images/blog-detail_slide.jpg" alt=""></div>
 
   <div class="row">
     <div class="col-8 blogDetailTitle">
