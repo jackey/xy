@@ -49,7 +49,7 @@
         </ul>
         <ul class=" right">
           <li><a href="<?php echo get_page_link(7)?>">Blogs</a></li>
-          <li><a ng-click="comingSoon($event)">近期活动</a></li>
+          <li><a href="<?php echo get_category_link(1)?>">近期活动</a></li>
           <li class="margin0"><a href="">联系我们</a></li>
         </ul>
       </div>

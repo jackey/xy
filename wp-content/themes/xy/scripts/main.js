@@ -20,12 +20,11 @@
             return {
                 retrict: 'A',
                 link: function (scope, element, attrs) {
-
                     var LoaderContainer = (function LoaderContainer () {
                         var html = [];
                         html.push('<div class="bg-loader"></div>');
-                        html.push('<div class="loader-icon">');
-                        html.push('<img src="/wp-content/themes/xy/misc/logo.png" />');
+                        //html.push('<div class="loader-icon">');
+                        //html.push('<img src="/wp-content/themes/xy/misc/logo.png" />');
                         html.push('</div>');
 
                         var element = angular.element(html.join(''));

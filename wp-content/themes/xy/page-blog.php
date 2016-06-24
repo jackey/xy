@@ -6,26 +6,7 @@
 
 <?php get_header(); ?>
 
-  <div class="blogDeSlide">
-    <div class="container tc">
-      <div class="blogDeSlideLogo"><img src="<?php echo bloginfo('template_url')?>/images/logoSmall.png" alt=""></div>
-      <div class="blogDeSlidetitle1">BLOG</div>
-      <p class="blogDeSlidetitle2">携隐博客</p>
-    </div>
-  </div>
-
-  <div class="insideNav">
-    <div class="container">
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-2"><a href="###" class="fontXY actPro">All</a></div>
-        <div class="col-2"><a href="###">留学报告</a></div>
-        <div class="col-2"><a href="###">我们的活动</a></div>
-        <div class="col-2"><a href="###">成功案例</a></div>
-        <div class="col-2"></div>
-      </div>
-    </div>
-  </div>
+<?php echo get_template_part('blog_header')?>
 
   <?php
     global $post;
