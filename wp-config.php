@@ -33,8 +33,8 @@ define('NONCE_SALT',       'O%BFhf&+ds}[j,C9*T><6T&Vjbhk%E>Di|2rL_|1[mu?LFSE04+p
 $table_prefix = 'wp_';
 
 
-define('WP_HOME','http://xy.fumer.cn');
-define('WP_SITEURL','http://xy.fumer.cn');
+define('WP_HOME','http://xy.local');
+define('WP_SITEURL','http://xy.local');
 
 
 

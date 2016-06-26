@@ -35,7 +35,7 @@
         </div>
     </script>
 </head>
-<body <?php echo body_class()?> ng-controller="XYController" data-image-preload style="opacity: 0">
+<body ng-controller="XYController" data-image-preload style="opacity: 0">
 
 
 <div class="<?php if (get_the_ID() == 2) echo "header";?> commonNav">
