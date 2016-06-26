@@ -35,7 +35,7 @@
         </div>
     </script>
 </head>
-<body ng-controller="XYController" data-image-preload style="opacity: 0">
+<body <?php echo body_class()?> ng-controller="XYController" data-image-preload style="opacity: 0">
 
 
 <div class="<?php if (get_the_ID() == 2) echo "header";?> commonNav">
@@ -48,7 +48,7 @@
           <li><a href="/#/consulting-team">顾问团队</a></li>
         </ul>
         <ul class=" right">
-          <li><a href="<?php echo get_page_link(7)?>">Blogs</a></li>
+          <li><a href="<?php echo get_category_link(3)?>">Blogs</a></li>
           <li><a href="<?php echo get_category_link(1)?>">近期活动</a></li>
           <li class="margin0"><a href="">联系我们</a></li>
         </ul>
@@ -59,7 +59,7 @@
           <li><a href="<?php echo get_page_link(2);?>">首页</a></li>
           <li><a href="/#/service">服务</a></li>
           <li><a href="/#/consulting-team">顾问团队</a></li>
-          <li><a href="<?php echo get_page_link(7)?>">Blogs</a></li>
+          <li><a href="<?php echo get_category_link(3)?>">Blogs</a></li>
           <li><a ng-click="comingSoon($event)">近期活动</a></li>
           <li><a href="">联系我们</a></li>
         </ul>

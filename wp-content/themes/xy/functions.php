@@ -117,3 +117,19 @@ function ajax_action_blog_list() {
 
     die();
 }
+
+function get_attachment_image_thumbnail($postID, $fieldName, $size = array()) {
+  $poster = get_post_meta($postID, $fieldName, true);
+  if (!$poster) return get_bloginfo('template_url').'/images/blog-list_1.jpg';
+  $image = wp_get_attachment_metadata($poster);
+  $srcImage = $image['file'];
+  $uploadDir = wp_upload_dir();
+  $editor = wp_get_image_editor($uploadDir['basedir'].'/'.$srcImage);
+  $editor->resize(270, 135, true);
+  $baseName = pathinfo($srcImage, PATHINFO_DIRNAME);
+  $fileName = pathinfo($srcImage, PATHINFO_FILENAME);
+  $extName = pathinfo($srcImage, PATHINFO_EXTENSION);
+  $distImage = $editor->save($uploadDir['basedir']."/{$baseName}/270x135-{$fileName}.{$extName}");
+  $baseUrl = str_replace($uploadDir['basedir'], "", $distImage['path']);
+  return $uploadDir['baseurl'].'/'.$baseUrl;
+}

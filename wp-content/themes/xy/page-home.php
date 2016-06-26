@@ -13,7 +13,7 @@
 
     <div class="row tc">
       <div class="col-4 borderRight"><p class="artWord master">Master</p></div>
-      <div class="col-4 borderRight"><p class="artWord mba">MBA</p></div>
+      <div class="col-4 borderRight"><a href="<?php echo get_page_link(63)?>"><p class="artWord mba">MBA</p></a></div>
       <div class="col-4"><p class="artWord colleage">Colleage</p></div>
       <div class="col-4 borderRight borderTop">
         <p class="artWord toefl">TOEFL</p>
@@ -153,35 +153,43 @@
     <div class="row tc">
       <h3>我们的干货</h3>
       <p class="h3_1">BLOG</p>
-      <div class="col-4 ganhuo1">
-        <dl>
-          <dd><img src="<?php echo bloginfo('template_url')?>/images/ganhuo_1.png" alt=""><span>GMAT</span></dd>
-          <dt>
-          <p>CARGO</p>
-          <span>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.<br /> Donec in blandit dolor. Vivamus a fringilla lorem</span>
-          </dt>
-        </dl>
-      </div>
-      <div class="col-4 ganhuo2">
-        <dl>
-          <dd><img src="<?php echo bloginfo('template_url')?>/images/ganhuo_2.png" alt=""><span>MBA</span></dd>
-          <dt>
-          <p>LOGISTIC SERVICES</p>
-          <span>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.<br /> Donec in blandit dolor. Vivamus a fringilla lorem</span>
-          </dt>
-        </dl>
-      </div>
-      <div class="col-4 ganhuo3">
-        <dl>
-          <dd><img src="<?php echo bloginfo('template_url')?>/images/ganhuo_3.png" alt=""><span>MS</span></dd>
-          <dt>
-          <p>STORAGE</p>
-          <span>Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in.<br /> Donec in blandit dolor. Vivamus a fringilla lorem</span>
-          </dt>
-        </dl>
-      </div>
+      <?php
+      $args = array(
+        'posts_per_page' => 3,
+        'category' => 3,
+        'post_status' => 'publish',
+        'orderby' => 'post_date',
+        'order' => 'DESC',
+        'offset' => 0,
+      );
+      global $post;
+      $posts = get_posts($args);
+      function get_tag_color($tag_id) {
+        $colors = array(
+          'color-1' => '0', // 默认
+          'color-2' => '9',
+          'color-3' => '10',
+          'color-4' => '8',
+        );
+        foreach ($colors as $color => $tag_ids) {
+          if (strpos($tag_ids, strval($tag_id)) !== FALSE) return $color;
+        }
+        return array_keys($colors)[0];
+      }
+       ?>
+      <?php foreach ($posts as $post): ?>
+        <div class="col-4 ganhuo1">
+          <dl>
+            <dd><img src="<?php echo get_attachment_image_thumbnail(get_the_ID(), 'poster', array(370, 185))?>"><?php $tags = wp_get_post_tags(get_the_ID());$tag = array_shift($tags);?><span class="<?php echo get_tag_color($tag->term_id); ?>"><?php echo $tag->name;?></span></dd>
+            <dt>
+            <p><a href="<?php the_permalink()?>"><?php the_title()?></a></p>
+            <span><?php echo get_post_meta(get_the_ID(), 'summary', true);?></span>
+            </dt>
+          </dl>
+        </div>
+      <?php endforeach;?>
 
-      <a class="floorBtn" href="###">查看全部</a>
+      <a class="floorBtn" href="<?php echo get_category_link(3)?>">查看全部</a>
     </div>
   </div>
 
@@ -192,22 +200,29 @@
         <p class="h3_1">ACTIVITIES</p>
       </div>
 
-      <div class="activitiesFrame activitiesFrame1 col-6">
-        <div>
-          <p class="activitiesWord1">Phasellus bibendum semper lectus, in ornare erat tempus eget</p>
-          <p class="activitiesWord2">Anim pariatur cliche reprehenderit, 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
-          <p class="activitiesWord3">12th Feb, 2107</p>
+      <?php
+      $args = array(
+        'posts_per_page' => 2,
+        'orderby' => 'post_date',
+        'category' => 1,
+        'order' => 'DESC',
+        'offset' => 0,
+        'post_status' => 'publish'
+      );
+      $posts = get_posts($args);
+      ?>
+      <?php global $post;?>
+      <?php foreach ($posts as $post): ?>
+        <div class="activitiesFrame activitiesFrame1 col-6">
+          <div>
+            <p class="activitiesWord1"><?php echo the_title()?></p>
+            <p class="activitiesWord2"><?php echo get_post_meta(the_ID(), 'summary', true)?></p>
+            <p class="activitiesWord3"><?php echo date("jS M Y", strtotime(get_post_meta(get_the_ID(), 'publish_date', true)))?></p>
+          </div>
         </div>
-      </div>
-      <div class="activitiesFrame activitiesFrame2 col-6">
-        <div>
-          <p class="activitiesWord1">Phasellus bibendum semper lectus, in ornare erat tempus eget</p>
-          <p class="activitiesWord2">Anim pariatur cliche reprehenderit, 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.</p>
-          <p class="activitiesWord3">12th Feb, 2107</p>
-        </div>
-      </div>
+      <?php endforeach;?>
 
-      <a class="floorBtn" href="###">查看全部</a>
+      <a class="floorBtn" href="<?php echo get_category_link(1)?>">查看全部</a>
     </div>
   </div>
 

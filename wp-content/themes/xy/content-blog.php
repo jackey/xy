@@ -5,7 +5,7 @@
 <div class="container blogContent">
   <div class="blogSlide"><img src="images/blog-detail_slide.jpg" alt=""></div>
 
-  <div class="row">
+  <div class="row row-1024">
     <div class="col-8 blogDetailTitle">
       <h2>携影MBA/MS申请分享会 北京站</h2>
       <p>准备申请2013年MBA的朋友们，为了方便让大家了解Top 16青睐什么样的申请人，提早对自己的申请做好准备，从现在起，在上海与北京两地，每逢周末，尚友都会分别安排一所顶级商学院的分享活动。</p>
