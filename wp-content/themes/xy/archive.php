@@ -46,7 +46,7 @@ $colors = array(
       <div class="row">
         <div class="col-bL1">
           <p class="bDSDate"><?php echo date("jS M Y", strtotime(get_post_meta(get_the_ID(), 'publish_date', true)))?></p>
-          <span class="blogListReport <?php  $cats = get_the_category(); $cat = array_shift($cats); echo $colors[$cat->cat_ID];?>"><?php the_category()?></span>
+          <span class="blogListReport <?php  $cats = get_the_category(); $cat = array_shift($cats); echo $colors[$cat->cat_ID];?>"><?php echo $cat->name?></span>
         </div>
         <div class="col-bL2">
           <h2><a href="<?php the_permalink()?>"><?php the_title()?></a></h2>
