@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/stylepart.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <script src="/scripts/jquery.min.js"></script>
+  <script src="/scripts/main.js"></script>
+  <title>携隐</title>
+  <style>
+    
+    .loading {
+      position: fixed;
+      z-index: 2;
+      width: 195px;
+      height: 199px;
+      left: 50%;
+      margin-left: -97px;
+      top: 20%;
+      animation: loading-animate 4s linear 0s infinite normal;
+    }
+
+    .loading-bg {
+      position: fixed;
+      width: 100%;
+      height:100%;
+      z-index: 1;
+      left: 0px;
+      top: 0px;
+      background: #eee;
+    }
+
+    .animate-pause {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+
+    @-webkit-keyframes loading-animate {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes loading-animate {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="body-wrap home-body">
+    <div class="section-wrap">
+      <div class="section home-section" fullscreen>
+          <div class="inner">
+            <div class="conwrap">
+              <div class="home-content">
+                <img src="/misc/bg-logo.png" alt="">
+                <h3>说出属于你的，独一无二的故事</h3>
+                <p>所有关于留学考试，留学申请，职业发展问题的问题</p>
+                <p>你都可以在这里找到答案</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-service">
+        <div class="inner">
+          <h2><span class="cn">服务</span><span class="en">SERVICES</span></h2>
+          <div class="sevices">
+            <ul class="clearfix">
+              <li>
+                <div class="service-item service-item-1">
+                  <div class="inner">
+                    <img src="/misc/service-flag1.png" alt="">
+                    <h4>申请</h4>
+                    <p>全套服 <br> 务 <br>一对一 <br>单项</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="service-item service-item-2">
+                  <div class="inner">
+                    <img src="/misc/service-flag2.png" alt="">
+                    <h4>考试</h4>
+                    <p>GMAT <br>一对一</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="section section-case">
+        <h2><span class="cn">成功案例</span><span class="en">CASE STUDY</span></h2>
+        <div class="case-items list-items">
+          <ul class="clearfix">
+            <li>
+              <div class="case-item case-item-1">
+                <div class="inner">
+                  <div class="case-avatar">
+                    <img src="/misc/people-1.png" alt="" class="avatar">
+                    <div class="people">
+                      <b class="pname">Louise</b>
+                      <p>学员故事</p>
+                    </div>
+                  </div>
+                  <div class="case-text">
+                    <h4>从全军覆没到百发百中</h4>
+                    <p>申请过程中，我正好经历了情感变故，不得不瞒着朝夕相处的同事朋友，每天都要心存愧疚且要装作若无其事；咬牙坚持申完...</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="case-item case-item-2">
+                <div class="inner">
+                  <div class="case-avatar">
+                    <img src="/misc/people-2.png" alt="" class="avatar">
+                    <div class="people">
+                      <b class="pname">一叶</b>
+                      <p>GMAT故事</p>
+                    </div>
+                  </div>
+                  <div class="case-text">
+                    <h4>590->690->730, GMAT分手快乐</h4>
+                    <p>英语基础不好也不坏，属于裸考四六级也不会太糟糕也不至于超过600分的样子，口语不怎么样,英语只够写写报告...</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="case-item case-item-2">
+                <div class="inner">
+                  <div class="case-avatar">
+                    <img src="/misc/people-3.png" alt="" class="avatar">
+                    <div class="people">
+                      <b class="pname">MH</b>
+                      <p>学员故事</p>
+                    </div>
+                  </div>
+                  <div class="case-text">
+                    <h4>From Big Four To Top Four</h4>
+                    <p>大概半年前，我刚开始懵懵懂懂地开始申请的时候，参加了一个沃顿校友的Coffee Chat, 我当时问了一个问题: Throughout...</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="view-more"><a class="btn btn-view-more">查看全部</a></div>
+        </div>
+      </div>
+
+      <div class="section section-blog">
+        <h2><span class="cn">部落格</span><span class="en">BLOG</span></h2>
+        
+        <div class="blog-list-items list-items">
+          <ul class="clearfix">
+            <li>
+              <div class="blog-list-item list-item">
+                <div class="date-flag">
+                  <div class="date-wrap">
+                    <div class="blog-date">
+                      <p>20 <br> DEC </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-item item-wrap">
+                  <img src="/misc/blog1.png" alt="" class="item-image">
+                  <div class="blog-item-text item-text">
+                    <h4>GMAT破壁</h4>
+                    <h4>告别原地打转，从这三步做起</h4>
+                    <p>GMAT有个很让人讨厌的特点：特别容易卡住。别的考试多花时间，慢慢总有提高，GMAT则似乎卡住后，就会跟鬼打墙一样原地踏步,卡很久都走不出来。有些人考来考去就是170，有些人考了三四次就在690附近, GMAT有个很让人讨厌的特点：特别容易卡住。别的考试多花时间，慢慢总有提高，GMAT则似乎卡住后，就会跟鬼打墙一样原地踏步,卡很久都走不出来。有些人考来考去就是170，有些人考了三四次就在690附近...</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="blog-list-item list-item">
+                <div class="date-flag">
+                  <div class="date-wrap">
+                    <div class="blog-date">
+                      <p>20 <br> DEC </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-item item-wrap">
+                  <img src="/misc/blog2.png" alt="" class="item-image">
+                  <div class="blog-item-text item-text">
+                    <h4>GMAT破壁</h4>
+                    <h4>告别原地打转，从这三步做起</h4>
+                    <p>GMAT有个很让人讨厌的特点：特别容易卡住。别的考试多花时间，慢慢总有提高，GMAT则似乎卡住后，就会跟鬼打墙一样原地踏步,卡很久都走不出来。有些人考来考去就是170，有些人考了三四次就在690附近...</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="blog-list-item list-item">
+                <div class="date-flag">
+                  <div class="date-wrap">
+                    <div class="blog-date">
+                      <p>20 <br> DEC </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="blog-item item-wrap">
+                  <img src="/misc/blog3.png" alt="" class="item-image">
+                  <div class="blog-item-text item-text">
+                    <h4>GMAT破壁</h4>
+                    <h4>告别原地打转，从这三步做起</h4>
+                    <p>GMAT有个很让人讨厌的特点：特别容易卡住。别的考试多花时间，慢慢总有提高，GMAT则似乎卡住后，就会跟鬼打墙一样原地踏步,卡很久都走不出来。有些人考来考去就是170，有些人考了三四次就在690附近...</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="newletter-form-wrap blog-list-item list-item">
+                <div class="date-flag">
+                  <div class="date-wrap">
+                    <div class="blog-date">
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-wrap blog-item ">
+                  <p>Always first ?</p>
+                  <p>订略电子报,抢先得到携隐最新资讯</p>
+                  <div class="form form-wrap form-newsleter">
+                    <input type="text" placeholder="填入电子信箱" />
+                    <button class="btn btn-confirm btn-blue">提交</button>
+                  </div>
+                  <a href="" class="view-more-link">查看全部文章</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section section-video">
+        <h2>XY CHANNEL</h2>
+        <div class="list-items video-items">
+          <ul class="clearfix">
+            <li>
+              <div class="list-video-item">
+                <div class="inner">
+                  <img src="/misc/video-img.png" alt="">
+                  <div class="desc">
+                    <p>除了“中国”我们还有什么</p>
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-video-item">
+                <div class="inner">
+                  <img src="/misc/video-img.png" alt="">
+                  <div class="desc">
+                    <p>申请中的“背景调查”到底是怎么回事？</p>
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-video-item">
+                <div class="inner">
+                  <img src="/misc/video-img.png" alt="">
+                  <div class="desc">
+                    <p>面试官给了特别的反馈，为什么我拿不到Offer呢?</p>
+                    <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn-confirm btn-blue">查看全部</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="site-footer clearfix">
+      <div class="wrap">
+        <div class="social-icons">
+          <a href=""><i class="fa fa-weixin" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-weibo" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        </div>
+        <div class="flinks">
+          <ul class="clearfix">
+            <li><a href="">关于我们</a></li>
+            <li><a href="">首页</a></li>
+            <li><a href="">服务</a></li>
+            <li><a href="">成功案例</a></li>
+            <li><a href="">部落格</a></li>
+            <li><a href="">XY Channel</a></li>
+          </ul>
+        </div>
+        <span class="copyright">&copy;携隐</span>
+      </div>
+    </div>
+
+    <div class="menu main-menu bottom">
+        <ul class="clearfix">
+          <li class="menu-item menu-item-1 active"><a href="">首页</a></li>
+          <li class="menu-item menu-item-2"><a href="">服务</a></li>
+          <li class="menu-item menu-item-3"><a href="">成功案例</a></li>
+          <li class="menu-item menu-item-4"><a href="">部落格</a></li>
+          <li class="menu-item menu-item-5"><a href="">XY Channel</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="loading animate-pause">
+      <img src="/misc/loading-bg.png" alt="">
+      <div class="loading-plane">
+        <img class="plane" src="/misc/plane.png" alt="">
+        <img class="plane-line" src="/misc/planeline.png" alt="">
+      </div>
+    </div>
+    <div class="loading-bg"></div>
+  </div>
+</body>
+</html>

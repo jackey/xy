@@ -1,0 +1,46 @@
+body {
+  background: url(../misc/bg-repeator.png) repeat; }
+
+.loading-plane {
+  position: absolute;
+  top: 17px;
+  left: 19px;
+  animation-name: loading-plane;
+  animation-duration: 4s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  width: 167px;
+  height: 167px; }
+  .loading-plane img.plane-line {
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+  .loading-plane img.plane {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 111; }
+
+@keyframes loading-plane {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+@keyframes -webkit-loading-plane {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(-360deg); } }
+
+.home-body .main-menu.bottom {
+  padding-bottom: 2rem; }
+
+.home-body .main-menu.top {
+  padding-top: 2rem; }
+
+.main-menu {
+  background: url(../misc/bg-repeator.png) repeat; }
+
+.main-menu ul li {
+  padding-bottom: .5rem; }
