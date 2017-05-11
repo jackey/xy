@@ -1,0 +1,26 @@
+$color_schema_blue: #15a4fd;
+$color_schema_gray: #555462;
+$site_width: 1070px;
+$color_schema_title: #222222;
+$color_schema_light_gray: #e3e3e3;
+$color_schema_light_dark: #555555;
+$color_schema_light_red: #f06475;
+
+@mixin clearfix {
+  clear: both;
+
+  &:before, &:after {
+    display: table;
+    content: " ";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin paddingAndMargin{
+  padding-bottom: 70px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #e3e3e3;
+}

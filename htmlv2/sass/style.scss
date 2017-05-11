@@ -1,3 +1,5 @@
+@import "./variables";
+
 body {
   font-size: 13px;
 }
@@ -20,13 +22,13 @@ a {
   clear: both;
 }
 
+
 $title_color: #323f52;
 $h4_color: #575563;
 $p_color: #686671;
 $box_shadow: 0px 0px 5px 1px #e2e2e2;
 $link_color: #c6c6c6;
 
-$site_width: 940px;
 
 * {
   box-sizing: border-box;

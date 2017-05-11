@@ -133,7 +133,7 @@ p {
   line-height: 150%; }
 
 .list-items {
-  width: 940px;
+  width: 1070px;
   margin: 0 auto;
   margin-top: 40px; }
   .list-items .view-more {
@@ -379,7 +379,7 @@ input {
       height: 3rem; }
 
 .site-footer {
-  width: 940px;
+  width: 1070px;
   margin: 0 auto; }
   .site-footer .wrap {
     float: right;

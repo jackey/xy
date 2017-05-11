@@ -9,26 +9,48 @@
       });
     });
 
+    var $mainMenu = $('.main-menu');
+
     $(window).scroll(function () {
       
       var scrolltop = $(this).scrollTop();
-      var wheight = $(window).height() - $('.main-menu').outerHeight();
+      var wheight = $(window).height() - $mainMenu.outerHeight();
       var holder = 0; // 和上面的边距
 
-
       if (wheight - scrolltop <= holder  ) {
-          $('.main-menu').css({
+          $mainMenu.css({
             bottom: wheight - holder
           }).addClass('top')
             .removeClass('bottom');
       } else {
-        $('.main-menu').css({
+        $mainMenu.css({
           bottom: $(this).scrollTop()
         }).addClass('bottom')
           .removeClass('top');
       }
 
+      // 导航变色
+      $('.home-body').find('.section').each(function () {
+        var $section = $(this),
+          index = $section.index();
+        
+        // 判断有没有到顶部
+        var offsetTop = $section.offset()['top'];
+        var meHeight = $section.height();
+        if ( scrolltop >= offsetTop && ( offsetTop + meHeight ) >= scrolltop ) {
+          $mainMenu.find('li').removeClass('active').eq(index).addClass('active');
+        }
+
+      });
+
     }).trigger('scroll');
+
+    window.em = function () {
+      var args = Array.prototype.slice.call(arguments);
+      args.map(function (arg) {
+        console.log( new Number(arg / 13).toFixed(2) );
+      });
+    }
       
   });
   
