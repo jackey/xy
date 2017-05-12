@@ -32,12 +32,12 @@
       // 导航变色
       $('.home-body').find('.section').each(function () {
         var $section = $(this),
-          index = $section.index();
+          index = $section.index() + 1;
         
         // 判断有没有到顶部
         var offsetTop = $section.offset()['top'];
         var meHeight = $section.height();
-        if ( scrolltop >= offsetTop && ( offsetTop + meHeight ) >= scrolltop ) {
+        if ( scrolltop >= offsetTop && ( offsetTop + meHeight ) > scrolltop ) {
           $mainMenu.find('li').removeClass('active').eq(index).addClass('active');
         }
 

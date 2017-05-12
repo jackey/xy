@@ -51,11 +51,10 @@ body {
 
 .home-body {
   .main-menu.bottom {
-    padding-bottom: 2rem;
   }
 
   .main-menu.top {
-    padding-top: 2rem;
+    
   }
 }
 
@@ -64,7 +63,8 @@ body {
 }
 
 .main-menu ul li {
-  padding-bottom: .5rem;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .tabs {
