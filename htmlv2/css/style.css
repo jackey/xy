@@ -51,7 +51,14 @@ h1 {
 .main-menu {
   position: fixed;
   width: 100%;
-  bottom: 1rem; }
+  bottom: 1rem;
+  z-index: 2; }
+  .main-menu.bottom ul li.menu-item-logo {
+    opacity: 0;
+    margin-left: -140px; }
+  .main-menu.top ul li.menu-item-logo {
+    opacity: 1;
+    margin-left: 0px; }
   .main-menu ul {
     text-align: center;
     list-style-type: none;
@@ -59,6 +66,7 @@ h1 {
     font-size: 0px;
     margin-left: -26px; }
     .main-menu ul li {
+      transition: all .3s ease;
       display: inline-block;
       list-style-type: none;
       width: 160px;
@@ -140,8 +148,8 @@ h2, h3, h4 {
           .section-service .sevices li .service-item .inner img, .section-case .sevices li .service-item .inner img, .section-blog .sevices li .service-item .inner img, .section-video .sevices li .service-item .inner img {
             margin-top: 50px; }
           .section-service .sevices li .service-item .inner p, .section-case .sevices li .service-item .inner p, .section-blog .sevices li .service-item .inner p, .section-video .sevices li .service-item .inner p {
-            font-size: 1rem;
-            color: #59585d;
+            font-size: 20px;
+            color: #555462;
             line-height: 200%; }
 
 .section-case, .section-blog {

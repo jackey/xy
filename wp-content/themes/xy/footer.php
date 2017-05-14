@@ -13,7 +13,7 @@
   </div>
 
   <div class="row copyright tc">
-    Copyright (c) 2013 uelike.com. All Rights Reserved V 1.8.5 <br>京ICP备13015845号-1
+    Copyright (c) 2016 xie-yin.com . All Rights Reserved <br>沪ICP备16028108号-1
   </div>
 </div>
 
