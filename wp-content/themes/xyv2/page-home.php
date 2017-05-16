@@ -9,7 +9,7 @@
     
     .loading {
       position: fixed;
-      z-index: 2;
+      z-index: 4;
       width: 195px;
       height: 199px;
       left: 50%;
@@ -20,9 +20,9 @@
 
     .loading-bg {
       position: fixed;
+      z-index: 3;
       width: 100%;
       height:100%;
-      z-index: 1;
       left: 0px;
       top: 0px;
       background: #eee;
@@ -57,19 +57,25 @@
 
     <div class="section-wrap">
       <div class="section home-section" fullscreen>
-          <div class="inner">
-            <div class="conwrap">
-              <div class="home-content">
-                <img src="<?php echo bloginfo('template_url')?>/misc/bg-logo.png" alt="">
-                <h1>说出属于你的，独一无二的故事</h1>
-                <p>所有关于留学考试，留学申请，职业发展问题的问题</p>
-                <p>你都可以在这里找到答案</p>
-              </div>
+        <div class="inner">
+          <div class="conwrap">
+            <div class="home-content">
+              <img src="<?php echo bloginfo('template_url')?>/misc/bg-logo.png" alt="">
+              <h1>说出属于你的，独一无二的故事</h1>
+              <p>所有关于留学考试，留学申请，职业发展问题的问题</p>
+              <p>你都可以在这里找到答案</p>
+            </div>
           </div>
         </div>
+        <i class="cloud cloud1"></i>
+        <i class="cloud cloud2"></i>
+        <i class="cloud cloud3"></i>
+        <i class="cloud cloud4"></i>
+        <i class="cloud cloud5"></i>
       </div>
 
       <div class="section section-service">
+        <div class="bg-line"></div>
         <div class="inner">
           <h2><span class="cn">服务</span><span class="en">SERVICES</span></h2>
           <div class="sevices">
@@ -77,7 +83,7 @@
               <li class="item item-1">
                 <div class="service-item service-item-1">
                   <a href="/product-category/service_application/"><div class="inner">
-                    <img src="<?php echo bloginfo("template_url")?>/misc/service-flag1.png" alt="">
+                    <img src="<?php echo bloginfo("template_url")?>/misc/2_Service_icon_apply.png" alt="">
                     <h4>申请</h4>
                     <p>全套服务<br>一对一 <br>单项</p>
                   </div></a>
@@ -86,7 +92,7 @@
               <li class="item item-2">
                 <div class="service-item service-item-2">
                   <a href="/product-category/service_exam/"><div class="inner">
-                    <img src="<?php echo bloginfo("template_url")?>/misc/service-flag2.png" alt="">
+                    <img src="<?php echo bloginfo("template_url")?>/misc/2_Service_icon_exam.png" alt="">
                     <h4>考试</h4>
                     <p>GMAT <br>一对一</p>
                   </div></a>

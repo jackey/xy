@@ -237,7 +237,7 @@
   
   // loading 的效果
   $(window).on('load' ,function () {
-
+  	
     $('.loading, .loading-bg').animate({
       opacity: 0
     }, 800, function() {

@@ -80,6 +80,7 @@ function twentyfifteen_header_style() {
 	?>
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url')?>/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_url')?>/fonts/font.css">
 
 	<?php 
 
