@@ -140,6 +140,7 @@ h1 {
   position: absolute;
   top: 18%;
   width: 100%;
+    z-index: 2;
   text-align: center; }
   .home-content h1 {
     letter-spacing: 4px; }
@@ -1116,6 +1117,7 @@ input {
 
 .body-static .main-menu.bottom {
   padding-top: 0px;
+  background: none;
 }
 
 .home-body .blog-list-items li {
@@ -1126,12 +1128,38 @@ input {
   left: 45px;
 }
 
+.home-body .section-wrap .section {
+    background-position: top center;
+    position: relative;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 .home-section {
-  background: url(./misc/bg-section-home.png);
-  background-position: top center;
-  position: relative;
-  background-size: 100%;
-  background-repeat: no-repeat;
+     background-image: url(./misc/linebg-home.png);
+}
+
+.home-body .section-wrap .section.section-service {
+    background-image: url(./misc/lineservice-bg.png);
+    background-size: 69%;
+    background-position: center center;
+}
+
+
+.home-body .section-wrap .section.section-case {
+    background-image: url(./misc/linecase-bg.png);
+}
+
+.home-body .section-wrap .section.section-blog {
+    background-image: url(./misc/lineblog-bg.png);
+    background-size: 69%;
+    background-position: center center;
+}
+
+.home-body .section-wrap .section.section-video {
+    background-image: url(./misc/linevideo-bg.png);
+    background-position: bottom center;
+    background-size: 70%;
 }
 
 .home-section .cloud {
@@ -1246,15 +1274,9 @@ input {
   }
 }
 
-@media all and (max-device-height: 800px) and (min-device-height: 1000px){
+@media all and (min-device-height: 750px) and (max-device-height: 1000px){
   .home-content {
-    top: 25%;
-  }
-}
-
-@media all and (max-device-height: 1000px) and (min-device-height: 1065px) {
-  .home-content {
-    top: 28%;
+    top: 29%;
   }
 }
 
@@ -1321,7 +1343,7 @@ input {
 }
 
 .home-section .bg-line-1 {
-  background: url(./misc/Background_6.png);
+  background: url(./misc/Background_3.png);
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
@@ -1329,6 +1351,10 @@ input {
   top: 56%;
   height: 153px;
   width: 765px;
+}
+
+.home-section .bg-line-2 {
+    display: none;
 }
 
 .section-case {
