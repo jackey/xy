@@ -321,7 +321,6 @@ function twentyfifteen_nav_description( $item_output, $item, $depth, $args ) {
 add_filter( 'walker_nav_menu_start_el', 'twentyfifteen_nav_description', 10, 4 );
 
 add_filter('wp_nav_menu_main-nav_items', 'add_logo_item_in_main_menu');
-
 if (!function_exists('add_logo_item_in_main_menu')) {
 	function add_logo_item_in_main_menu($items, $args) {
 
@@ -330,6 +329,46 @@ if (!function_exists('add_logo_item_in_main_menu')) {
 		return $items;
 	}
 }
+
+add_filter('woocommerce_checkout_fields', 'xyv2_custom_checkout_fields');
+if (!function_exists('xyv2_custom_checkout_fields')) {
+	function xyv2_custom_checkout_fields($fields) {
+
+		$available_fields = array(
+			'billing' => array(),
+			'account' => $fields['account'],
+		);
+		$billing_fields = array();
+		$billing_field_names = array('billing_first_name', 'billing_email', 'billing_phone');
+		foreach ($available_field_names as $name) {
+			$billing_fields[$name] = $fields['billing'][$name];
+		}
+		$billing_fields['billing_first_name']['label'] = '姓名';
+		$billing_fields['billing_first_name']['required'] = true;
+		$billing_fields['billing_first_name']['placeholder'] = '必填';
+
+		$billing_fields['billing_email']['label'] = '邮箱';
+		$billing_fields['billing_email']['required'] = true;
+		$billing_fields['billing_email']['placeholder'] = '必填';
+
+		$billing_fields['billing_phone']['label'] = '手机';
+		$billing_fields['billing_phone']['required'] = true;
+		$billing_fields['billing_phone']['placeholder'] = '必填';
+
+		$billing_fields['billing_wechat'] = array(
+			'type' => 'text',
+			'label' => '微信',
+			'placeholder' => '必填',
+			'required' => true,
+			'class' => array('input-text'),
+		);
+
+		$available_fields['billing'] = $billing_fields;
+
+		return $available_fields;
+	}
+}
+
 
 /**
  * Add a `screen-reader-text` class to the search form's submit button.

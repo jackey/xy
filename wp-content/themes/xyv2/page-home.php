@@ -67,6 +67,7 @@
             </div>
           </div>
         </div>
+        <div class="bg-line-1"></div>
         <i class="cloud cloud1"></i>
         <i class="cloud cloud2"></i>
         <i class="cloud cloud3"></i>
@@ -76,6 +77,8 @@
 
       <div class="section section-service">
         <div class="bg-line"></div>
+        <div class="bg-line-2"></div>
+        <div class="bg-line-3"></div>
         <div class="inner">
           <h2><span class="cn">服务</span><span class="en">SERVICES</span></h2>
           <div class="sevices">
@@ -121,6 +124,7 @@
       
       <?php if ($blogs->have_posts()): ?>
         <div class="section section-case">
+          <div class="bg-line"></div>
           <h2><span class="cn">成功案例</span><span class="en">CASE STUDY</span></h2>
           <div class="case-items list-items">
             <ul class="clearfix">
