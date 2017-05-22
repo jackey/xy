@@ -1562,6 +1562,9 @@ p.notice {
   display: none !important;
 }
 
+.checkout-wrap .woocommerce-message {
+  display: none;
+}
 
 
 

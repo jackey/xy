@@ -10,6 +10,9 @@ if ($controls->is_action('save')) {
     $controls->data['status'] = 'C';
     $controls->data['sex'] = 'n';
 
+    print_r($controls);
+    die();
+
     $user = $module->save_user($controls->data);
     if ($user === false) {
         $controls->errors = 'This email already exists.';

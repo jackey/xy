@@ -19,7 +19,11 @@
             mail: email,
           };
           $.post(xy_ajax_object.ajaxurl ,data ,function (response) {
-            console.log(response);
+            if (response['success'] == 1 ) {
+              alert('您已成功订阅Newsletter');
+            } else {
+              alert(response.error);
+            }
           });
         }
       });

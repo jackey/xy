@@ -22,23 +22,31 @@
  */
 
 /* Exit if accessed directly */
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) 
+  exit;
 
 if (!function_exists('xy_user_register_newsletter')) {
   function xy_user_register_newsletter() {
     $mail = $_POST['mail'];
 
-    if (class_exists('wpMail')) {
-      $wpMail = new wpMail();
-      global $Subscriber;
-      $data = array('email' => $$mail, 'list_id' => array(1,2));
+    require_once NEWSLETTER_INCLUDES_DIR . '/controls.php';
+    $controls = new NewsletterControls();
+    $module = NewsletterUsers::instance();
 
-      if ($Subscriber->optin($data, false)) {
-        echo json_encode(array('success' => 1, 'err' => ''));
-      } else {
-        echo json_encode(array('success' => 0, 'err' => $Subscriber->errors));
-      }
+    $error = "";
+    $success = 1;
+
+    $controls->data['status'] = 'C';
+    $controls->data['sex'] = 'n';
+    $controls->data['email'] = $mail;
+
+    $user = $module->save_user($controls->data);
+    if ($user === false) {
+        $error = '您填写的邮箱已经订阅了Newsletter';
+        $success = 0;
     }
+
+    echo json_encode(array('error' => $error, 'success' => $success));
 
 
     wp_die();
