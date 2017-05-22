@@ -27,8 +27,14 @@
     <div class="row clearfix">
       <p class="price-text1">单价 <?php echo $product->get_price(); ?>/小时</p>
       <div class="float-style">
-        <a class="common-btn service-btn-1" href="<?php echo $product->add_to_cart_url()?>">加入购物车</a>
-        <a class="common-btn service-btn-2" href="<?php echo $product->add_to_cart_url()?>">直接购买</a>
+        <a class="common-btn service-btn-1 xyv2-add-to-cart" 
+          data-url="<?php echo get_permalink(get_the_ID())?>"
+          data-id="<?php echo get_the_ID()?>" 
+          href="javascript:void();">添加购物车</a>
+        <a class="common-btn service-btn-2 directly-buy" 
+          data-url="<?php echo get_permalink(get_the_ID())?>"
+          data-id="<?php echo get_the_ID()?>" 
+          href="javascript:void();">直接购买</a>
       </div>
     </div>
 

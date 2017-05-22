@@ -14,7 +14,7 @@ get_header('nonav'); ?>
       <img src="<?php echo bloginfo('template_url')?>/misc/logo.png" alt="">
     </div>
     <div class="breadthumb">
-      <a href="javascript:void(0)" class="back"><&nbsp;返回</a>
+      <a href="/" class="back"><&nbsp;返回</a>
     </div>
 
     <div class="inner clearfix">

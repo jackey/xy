@@ -1557,3 +1557,28 @@ p.notice {
   margin-top: 20px;
   color: #555462;
 }
+
+.woocommerce .cart-collaterals .blockUI.blockOverlay {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -369,6 +369,16 @@ if (!function_exists('xyv2_custom_checkout_fields')) {
 	}
 }
 
+add_action('wp_enqueue_scripts', 'xyv2_enqueue_scripts');
+
+if (!function_exists('xyv2_enqueue_scripts')) {
+	function xyv2_enqueue_scripts() {
+		wp_enqueue_script('ajax-script', get_template_directory_uri().'/js/newsletter.js');
+
+		wp_localize_script('ajax-script', 'xy_ajax_object', array('ajaxurl' => admin_url('admin-ajax.php')));
+	}
+}
+
 
 /**
  * Add a `screen-reader-text` class to the search form's submit button.

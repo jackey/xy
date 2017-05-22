@@ -246,6 +246,86 @@
 
   });
 
+  $(function () {
+		function addToCart(id, url, quantity, cb) {
+		  	var $window = $(window);
+				if (typeof quantity == 'function') {
+					cb = quantity;
+					quantity = 1;
+				} else {
+					cb = function () {};
+				}
+
+		  	var form = new FormData();
+		  	form.append('add-to-cart', id);
+		  	form.append('quantity', quantity);
+		  	if ($window.data('process')) {
+		  		return ;
+		  	}
+
+		  	$window.data('process', true);
+		  	$.ajax({
+		  		url: url,
+		  		cache: false,
+		  		contentType: false,
+		  		processData: false,
+		  		type: 'POST',
+		  		data: form,
+		  		success: function () {
+		  			$window.data('process', false);
+		  			cb();
+		  		}
+		  	});
+		  }
+
+		  $('.directly-buy').click(function(){
+		  	var id = $(this).data('id');
+		  	var url = $(this).data('url');
+				addToCart(id, url, function () {
+					window.location.href = '/cart';
+				});
+		  });
+
+		  $('.xyv2-add-to-cart').click(function() {
+		  	var id = $(this).data('id');
+		  	var url = $(this).data('url');
+				addToCart(id, url, function () {
+					alert('所购服务已成功添加购物车');
+				});
+		  });
+  });
+
+  $(function () {
+		var $floatMenu = $('.float-menu');
+
+		if ($floatMenu.size() <= 0) return ;
+
+	  var top = $floatMenu.css('top').replace('px', '')*1;
+	  var left = $floatMenu.css('left').replace('px', '')*1;
+	  var offsetTop = $floatMenu.offset()['top'];
+	  var offsetLeft= $floatMenu.offset()['left'];
+		
+		$floatMenu.find('li').click(function () {
+			console.log({scrollTop: $('#post-' + $(this).data('id')).offset()['top']});
+			$('body').stop().animate({scrollTop: $('#post-' + $(this).data('id')).offset()['top']});
+		});
+
+	  $(window).scroll(function () {
+	  	var scrollTop = $(window).scrollTop();
+	  	var holder = 20;
+	  	if (scrollTop + 20 >= offsetTop) {
+				//$floatMenu.css('transform', 'translateY(' + ( scrollTop + 20 - offsetTop ) + 'px)' );
+				$floatMenu.css({
+					position: 'fixed',
+					top: holder + 'px',
+					left: offsetLeft
+				});
+	  	} else {
+	  		$floatMenu.removeAttr('style');
+	  	}
+	  }).trigger('scroll');
+  });
+
 })(jQuery);
 
 (function ($) {

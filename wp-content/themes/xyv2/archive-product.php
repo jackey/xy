@@ -8,7 +8,7 @@
       <h1 class="service-name">申<br />请</h1>
       <!-- 浮动菜单 -->
       <div class="float-menu">
-        <a href="###">< 返回</a>
+        <a href="javascript:void(0)" data-back>< 返回</a>
         <ul>
           <?php 
 
@@ -30,7 +30,7 @@
             while ($products->have_posts()) {
               $products->the_post();
               global $product; ?>
-              <li><?php echo $product->name; ?></li>
+              <li data-id="<?php echo $product->id ?>"><?php echo $product->name; ?></li>
            <?php  }
             wp_reset_query();
 

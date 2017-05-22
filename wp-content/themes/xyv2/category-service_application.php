@@ -6,19 +6,16 @@
   <div class="section clearfix" >
     <div class="content-wrap ">
       <h1 class="service-name">申<br />请</h1>
-      <!-- 浮动菜单 -->
-      <div class="float-menu">
-        <a href="###">< 返回</a>
-        <ul>
-          <li class="active">全套服务</li>
-          <li>一对一</li>
-          <li>单项</li>
-        </ul>
-      </div>
+
+      <?php 
+        $services = array();
+      ?>
       
       <?php 
         // Start the Loop.
         while ( have_posts() ) : the_post();
+
+          $services[] = array('title' => get_the_title(), 'id' => get_the_ID());
 
           /*
            * Include the Post-Format-specific template for the content.
@@ -29,7 +26,19 @@
 
         // End the loop.
         endwhile;
+
+        wp_reset_query();
       ?>
+
+            <!-- 浮动菜单 -->
+      <div class="float-menu">
+        <a href="/">< 返回</a>
+        <ul>
+          <?php foreach ($services as $service): ?>
+            <li class="active" data-id=<?php echo $service['id']?>><?php echo $service['title']?></li>
+          <?php endforeach;?>
+        </ul>
+      </div>
 
 
     </div>
