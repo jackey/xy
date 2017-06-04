@@ -18,6 +18,31 @@
       animation: loading-animate 4s linear 0s infinite normal;
     }
 
+    .loading > img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media all and (min-width: 320px) and (max-width: 768px) {
+      .loading {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+      }
+
+      .loading-plane {
+        width: 126px;
+        height: 126px;
+        top: 11px;
+        left: 12px;
+      }
+
+      .loading-plane img.plane-line {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .loading-bg {
       position: fixed;
       z-index: 13;
@@ -84,7 +109,8 @@
                   <a href="/product-category/service_application/"><div class="inner">
                     <img src="<?php echo bloginfo("template_url")?>/misc/2_Service_icon_apply.png" alt="">
                     <h4>申请</h4>
-                    <p>全套服务<br>一对一 <br>单项</p>
+                    <p class="view-pc">全套服务<br>一对一 <br>单项</p>
+                    <p class="view-mobile">全套服务&nbsp;/&nbsp;一对一&nbsp;/&nbsp;单项</p>
                   </div></a>
                 </div>
               </li>
@@ -93,7 +119,8 @@
                   <a href="/product-category/service_exam/"><div class="inner">
                     <img src="<?php echo bloginfo("template_url")?>/misc/2_Service_icon_exam.png" alt="">
                     <h4>考试</h4>
-                    <p>GMAT <br>一对一</p>
+                    <p class="view-pc">GMAT <br>一对一</p>
+                    <p class="view-mobile">GMAT&nbsp;/&nbsp;一对一</p>
                   </div></a>
                 </div>
               </li>
@@ -192,7 +219,33 @@
                       </div>
                     </div>
                     <div class="blog-item item-wrap">
-                      <img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image">
+                      <div class="img-wrap"><img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image"></div>
+                      <div class="blog-item-text item-text">
+                        <h4><?php the_title()?></h4>
+                        <p><?php 
+                          $content = get_the_content();
+                          $simple_content = wp_strip_all_tags($content);
+                          echo mb_substr($simple_content, 0, 500).'...';
+                        ?></p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              <?php endwhile;?>
+
+              <?php while ($blogs->have_posts()):  ?>
+                <?php $blogs->the_post();?>
+                <li>
+                  <div class="blog-list-item list-item">
+                    <div class="date-flag">
+                      <div class="date-wrap">
+                        <div class="blog-date">
+                          <p>20 <br> DEC </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blog-item item-wrap">
+                      <div class="img-wrap"><img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image"></div>
                       <div class="blog-item-text item-text">
                         <h4><?php the_title()?></h4>
                         <p><?php 

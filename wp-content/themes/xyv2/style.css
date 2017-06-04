@@ -84,6 +84,7 @@ a {
 h1 {
   font-size: 40px;
   color: #2f4052;
+  font-family: "NotoSansCJKsc-Medium";
   line-height: 150%; }
 
 .home-content > img {
@@ -1563,6 +1564,10 @@ p.notice {
 }
 
 .checkout-wrap .woocommerce-message {
+  display: none;
+}
+
+.view-mobile {
   display: none;
 }
 

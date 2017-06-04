@@ -26,16 +26,6 @@
     <div class="content">
       <div class="blog-node">
         
-        <div class="share-icons">
-          <p>分享</p>
-          <div class="icon-wrap">
-            <i class="fa fa-weixin" aria-hidden="true"></i>
-          </div>
-          <div class="icon-wrap">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </div>
-        </div>
-        
         <div class="article-wrap">
 
           <header class="entry-header">
@@ -69,6 +59,15 @@
               ) );
             ?>
           </div><!-- .entry-content -->
+
+          <div class="share-icons view-mobile clearfix">
+            <div class="icon-wrap">
+              <i class="fa fa-weixin" aria-hidden="true"></i>
+            </div>
+            <div class="icon-wrap">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+          </div>
 
           <?php 
             
@@ -114,16 +113,23 @@
                 <?php wp_reset_query();?>
               </ul>
             </div>          
-            
           <?php endif;?>
-
           <div class="qrcode-wrap">
             <div class="inner">
               <img src="<?php bloginfo('template_url')?>/misc/qrcode.png" alt="">
               <p>扫描QR code 加入微信 <br>携隐咨询微信号: xymelody</p>
             </div>
           </div>
-
+        </div>
+        
+        <div class="share-icons view-pc">
+          <p>分享</p>
+          <div class="icon-wrap">
+            <i class="fa fa-weixin" aria-hidden="true"></i>
+          </div>
+          <div class="icon-wrap">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
         </div>
 
       </div>

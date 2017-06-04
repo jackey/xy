@@ -81,26 +81,27 @@
                       $blogs->the_post(); ?>
 
                         <li>
-                          <div class="article-meta">
-                            <div class="wrap">
-                              <div class="time"><?php the_date('Y/m/d')?></div>
-                              <div class="tags">
-                                <ul class="clearfix">
-                                  <li><span>最新</span></li>
-                                </ul>
+                          <div class="blog-inner-wrap">
+                            <div class="article-meta">
+                              <div class="wrap">
+                                <div class="time"><?php the_date('Y/m/d')?></div>
+                                <div class="tags">
+                                  <ul class="clearfix">
+                                    <li><span>最新</span></li>
+                                  </ul>
+                                </div>
                               </div>
                             </div>
+                            <a href="<?php the_permalink()?>">
+                              <h3><?php the_title()?></h3>
+                              <p>
+                                <?php 
+                                  $content = get_the_content(); 
+                                  $simple_content = wp_strip_all_tags($content); 
+                                  echo mb_substr($simple_content, 0, 100)?>...
+                              </p>
+                            </a>
                           </div>
-                          
-                          <a href="<?php the_permalink()?>">
-                            <h3><?php the_title()?></h3>
-                            <p>
-                              <?php 
-                                $content = get_the_content(); 
-                                $simple_content = wp_strip_all_tags($content); 
-                                echo mb_substr($simple_content, 0, 100)?>...
-                            </p>
-                          </a>
                         </li>
                   <?php     
                      endwhile;

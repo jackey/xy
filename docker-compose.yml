@@ -1,0 +1,17 @@
+web:
+  build: .
+  command: php -S 0.0.0.0:8000 -t /code
+  ports:
+    - "8000:8000"
+  volumes:
+    - .:/code
+  links:
+    - db
+
+db:
+  build: ./db
+  environment:
+    MYSQL_DATABASE: xy
+    MYSQL_USER: xy
+    MYSQL_PASSWORD: admin
+    MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
