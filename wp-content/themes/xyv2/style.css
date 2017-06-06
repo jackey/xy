@@ -326,7 +326,7 @@ p {
     content: "";
     top: 0px;
     height: 100%;
-    left: 55px;
+    left: 54px;
     width: 3px;
     background: #aeaeae; }
   .blog-list-items .blog-list-item {
@@ -384,9 +384,9 @@ input {
 .newletter-form-wrap .btn-confirm {
   margin-left: 14px;
   width: 70px;
-  height: 44px;
   box-sizing: border-box;
-  padding: 0px; }
+  padding: 9px 0px;
+}
 
 .newletter-form-wrap .form-newsleter {
   margin-top: 25px; }
@@ -496,8 +496,13 @@ input {
           .site-footer .wrap .flinks li a:hover {
             color: #000; }
     .site-footer .wrap .copyright {
+
       float: left;
-      color: #a1a1a1; }
+      color: #a1a1a1;
+      margin-top: 4px;
+      margin-left: 10px;
+
+    }
 
 .body-static {
 
@@ -628,9 +633,13 @@ input {
       width: 33.33%;
       height: 48px;
       line-height: 48px;
-      text-align: center; }
+      text-align: center; 
+  }
+
   .service-page .content-wrap .float-style {
-    float: right; }
+    float: right; 
+    margin-top: 10px;
+  }
   .service-page .content-wrap .common-btn {
     display: inline-block;
     width: 130px;
@@ -650,7 +659,8 @@ input {
   color: #f1496e; }
 
 .service-training-page .content-wrap .contents .price-text1 {
-  line-height: 30px; }
+  line-height: 30px; 
+}
 
 .service-training-page .content-wrap .contents .text-style-1 {
   margin: 20px 0 10px;
@@ -727,7 +737,7 @@ body {
   float: left; }
 
 .two-column .sidebar {
-  width: 31.02%;
+  width: 32.02%;
   float: right; }
 
 .article-meta .wrap {
@@ -768,10 +778,15 @@ body {
   margin-top: 1.15em; }
 
 input {
-  height: 40px; }
+  height: 40px; 
+  line-height: 40px;
+  margin: 0px;
+  box-sizing: border-box;
+}
 
 .btn {
-  padding: 11px 36px; }
+  padding: 9px 36px; 
+}
 
 .tips {
   color: #555462;
@@ -1517,7 +1532,6 @@ input {
 
 .cart-page #place_order  {
   width: 100px;
-  height: 50px;
   background: #15a4fd;
   color: #fff;
   border-radius: 3px;
@@ -1566,7 +1580,17 @@ p.notice {
   display: none;
 }
 
+.error-404 .page-header {
+  text-align: center;
+  padding-bottom: 200px;
+}
 
+.price-text1  {
+    display: inline-block;
+    line-height: 60px;
+    font-size: 20px;
+    color: #232323;
+}
 
 
 

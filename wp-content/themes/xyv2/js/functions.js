@@ -326,6 +326,58 @@
 	  }).trigger('scroll');
   });
 
+  $(function () {
+    $('input[name="woocommerce_checkout_place_order"]').click(function (event) {
+      var name = $('input[name="billing_first_name"]').val();
+      var email = $('input[name="billing_email"]').val();
+      var phone = $('input[name="billing_phone"]').val();
+      var wx = $('input[name="billing_wechat"]').val(); 
+
+      function isEmail() {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      }
+
+      function isPhone() {
+        var re = /^(1\d{2})\d{8}/;
+        return re.test(phone);
+      }
+
+      if (name.trim().length <= 0) {
+        //alert('请输入姓名');
+        $('input[name="billing_first_name"]').focus();
+        event.preventDefault();
+        return false;
+      } else if (email.trim().length <= 0) {
+        //alert('请输入邮箱');
+        $('input[name="billing_email"]').focus();
+        event.preventDefault();
+        return false;
+      } else if (!isEmail()) {
+        //alert('请输入正确的邮箱');
+        $('input[name="billing_email"]').focus();
+        event.preventDefault();
+        return false;
+      } else if (phone.length <= 0) {
+        //alert('请输入手机号码');
+        $('input[name="billing_phone"]').focus();
+        event.preventDefault();
+        return false;
+      } else if (isPhone()) {
+        //alert('请输入正确的手机号码');
+        $('input[name="billing_phone"]').focus();
+        event.preventDefault();
+        return false;
+      } else if (wx.trim().length <= 0) {
+        //alert('请输入微信号');
+        $('input[name="billing_wechat"]').focus();
+        event.preventDefault();
+        return false;
+      }
+
+    });
+  });
+
 })(jQuery);
 
 (function ($) {
