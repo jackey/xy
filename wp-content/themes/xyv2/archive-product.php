@@ -5,7 +5,8 @@
 
   <div class="section clearfix" >
     <div class="content-wrap ">
-      <h1 class="service-name">申<br />请</h1>
+      <h1 class="service-name view-pc">申<br />请</h1>
+      <h1 class="service-name view-mobile">申请</h1>
       <!-- 浮动菜单 -->
       <div class="float-menu">
         <a href="javascript:void(0)" data-back>< 返回</a>

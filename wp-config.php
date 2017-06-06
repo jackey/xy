@@ -6,13 +6,13 @@
 define('DB_NAME', 'xy');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'xy');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'admin');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'db');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -30,11 +30,10 @@ define('LOGGED_IN_SALT',   '1yC+5x|`i?b^1;fZSdd05 %-vyVF>- A{H9X)nR_Q$,vUb}1!-6V
 define('NONCE_SALT',       'O%BFhf&+ds}[j,C9*T><6T&Vjbhk%E>Di|2rL_|1[mu?LFSE04+prqsMeGnhHr),');
 
 
-$table_prefix = 'wp_';
+define('WP_HOME','http://127.0.0.1:8000');
+define('WP_SITEURL','http://127.0.0.1:8000');
 
-
-define('WP_HOME','http://xy.local');
-define('WP_SITEURL','http://xy.local');
+$table_prefix  = 'wp_';
 
 
 

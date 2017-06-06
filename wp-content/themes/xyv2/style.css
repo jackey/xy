@@ -84,6 +84,7 @@ a {
 h1 {
   font-size: 40px;
   color: #2f4052;
+  font-family: "NotoSansCJKsc-Medium";
   line-height: 150%; }
 
 .home-content > img {
@@ -1580,8 +1581,6 @@ p.notice {
   display: none;
 }
 
-.error-404 .page-header {
-  text-align: center;
   padding-bottom: 200px;
 }
 
@@ -1591,6 +1590,7 @@ p.notice {
     font-size: 20px;
     color: #232323;
 }
+
 
 
 
