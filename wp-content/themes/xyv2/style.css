@@ -673,8 +673,8 @@ body {
 
 .loading-plane {
   position: absolute;
-  top: 17px;
-  left: 19px;
+  top: 14px;
+  left: 15px;
   animation-name: loading-plane;
   animation-duration: 4s;
   animation-direction: normal;
