@@ -2,6 +2,7 @@
 /**
  * Template Name: Blogs Page
  */
+$has_search = true;
 ?>
 <?php
   get_header('nosidebar');
@@ -12,11 +13,12 @@
   $tag = $_GET['tag'];
 
   $type = $_SERVER['REQUEST_URI'];
-  if (strpos($type, '/cases/') == 0 ) {
+  if (strpos($type, '/cases/') === 0 ) {
     $term = 'cases';
   } else {
     $term = 'blog';
   }
+
   
   $args = array(
     'post_type' => 'post',
@@ -42,6 +44,8 @@
   if ($keyword) {
     $args['s'] = $keyword;
   }
+
+  save_search_keyword($keyword);
 
   $blogs = new WP_Query($args);
 
@@ -138,11 +142,14 @@
                 <button class="btn btn-blue" type="submit">确认</button>
               </form>
             </div>
-            <div class="tips">
+            <div class="tips ">
               <span>热门搜索: </span>
-              <span class="tip-tag">热搜词,</span>
-              <span class="tip-tag">热搜词,</span>
-              <span class="tip-tag">热搜词,</span>
+              <?php $hot_keywords = hot_keywords_items(); ?>
+              <?php foreach ($hot_keywords as $hotkey): ?>
+                <span class="tip-tag"><a 
+                  href="/blogs?keyword=<?php echo $hotkey->terms?>">
+                    <?php echo $hotkey->terms?></a></span>
+              <?php endforeach?>
             </div>
           </div>
       
@@ -153,7 +160,7 @@
               <ul class="clearfix">
                 <?php for ($i = 0; $i < count($tags) ; $i++ ) { ?>
                   <?php $tag = $tags[$i];?>
-                  <li><a href="?tag=<?php echo urlencode($tag->slug)?>" href=""><?php echo $tag->name;?></a></li>
+                  <li><a href="?tag=<?php echo urlencode($tag->slug)?>" ><?php echo $tag->name;?></a></li>
                 <?php } ?>
               </ul>
             </div>

@@ -393,6 +393,114 @@ function twentyfifteen_search_form_modify( $html ) {
 }
 add_filter( 'get_search_form', 'twentyfifteen_search_form_modify' );
 
+if (!function_exists('load_dropdown_cart_widget')) {
+	function the_dropdown_cart_widget() {
+		$widget_name = 'WooCommerce_Widget_DropdownCart';
+
+		ob_start();
+		the_widget($widget_name);
+		echo ob_get_clean();
+		ob_end_clean();
+	}
+}
+
+if (!function_exists('save_search_keyword')) {
+	function save_search_keyword($keyword, $posts) {
+		global $wpdb, $wp_query, $tguy_sm_save_count;
+
+		// Get all details of this search
+		// search string is the raw query
+		$search_string = $keyword;
+		if (get_magic_quotes_gpc()) {
+			$search_string = stripslashes($search_string);
+		}
+		// search terms is the words in the query
+		$search_terms = $search_string;
+		$search_terms = preg_replace('/[," ]+/', ' ', $search_terms);
+		$search_terms = trim($search_terms);
+		$hit_count = $wp_query->found_posts; // Thanks to Will for this line
+
+		// Other useful details of the search
+		$details = '';
+		if (tguy_sm_array_value($options, 'sm_details_verbose')) {
+			if ($record_duplicates) {
+				$details .= __('Search Meter save count', 'search-meter') . ": $tguy_sm_save_count\n";
+			}
+			foreach (array('REQUEST_URI','REQUEST_METHOD','QUERY_STRING','REMOTE_ADDR','HTTP_USER_AGENT','HTTP_REFERER')
+			         as $header) {
+				$details .= $header . ': ' . tguy_sm_array_value($_SERVER, $header) . "\n";
+			}
+		}
+
+		$success = $wpdb->query($wpdb->prepare("
+			INSERT INTO `{$wpdb->prefix}searchmeter_recent` (`terms`,`datetime`,`hits`,`details`)
+			VALUES (%s, UTC_TIMESTAMP(), %d, %s)",
+			$search_string,
+			$hit_count,
+			$details
+		));
+
+		if ($success) {
+
+			$rowcount = $wpdb->get_var(
+				"SELECT count(`datetime`) as rowcount
+				FROM `{$wpdb->prefix}searchmeter_recent`");
+
+			// History size can be overridden by a user by adding a line like this to functions.php:
+			//   add_filter('search_meter_history_size', function() { return 50000; });
+			$history_size = apply_filters('search_meter_history_size', 500);
+
+			// Ensure history table never grows larger than (history size) + 100; truncate it
+			// to (history size) when it gets too big. (This we way will only truncate the table
+			// every 100 searches, rather than every time.)
+			if ($history_size + 100 < $rowcount)
+			{
+				// find time of ($history_size)th entry; delete everything before that
+				$dateZero = $wpdb->get_var($wpdb->prepare(
+					"SELECT `datetime`
+					FROM `{$wpdb->prefix}searchmeter_recent`
+					ORDER BY `datetime` DESC LIMIT %d, 1", $history_size));
+
+				$query = "DELETE FROM `{$wpdb->prefix}searchmeter_recent` WHERE `datetime` < '$dateZero'";
+				$success = $wpdb->query($query);
+			}
+		}
+
+		$suppress = $wpdb->suppress_errors();
+		$success = $wpdb->query($wpdb->prepare("
+			INSERT INTO `{$wpdb->prefix}searchmeter` (`terms`,`date`,`count`,`last_hits`)
+			VALUES (%s, UTC_DATE(), 1, %d)",
+			$search_terms,
+			$hit_count
+		));
+		$wpdb->suppress_errors($suppress);
+		if (!$success) {
+			$success = $wpdb->query($wpdb->prepare("
+				UPDATE `{$wpdb->prefix}searchmeter` SET
+					`count` = `count` + 1,
+					`last_hits` = %d
+				WHERE `terms` = %s AND `date` = UTC_DATE()",
+				$hit_count,
+				$search_terms
+			));
+		}
+	}
+}
+
+if (!function_exists('hot_keywords_items')) {
+	function hot_keywords_items() {
+		global $wpdb;
+		$results = $wpdb->get_results($wpdb->prepare("SELECT terms FROM `{$wpdb->prefix}searchmeter` ORDER BY date DESC LIMIT 3"));
+		return $results;
+	}
+}
+
+
+remove_action('woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20);
+
+// add_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
+// add_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
+
 /**
  * Implement the Custom Header feature.
  *

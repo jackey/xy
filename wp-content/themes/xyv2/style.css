@@ -795,7 +795,7 @@ input {
   .tips span {
     display: inline-block;
     font-size: 1.15em; }
-  .tips span.tip-tag {
+  .tips span.tip-tag a{
     color: #15a4fd; }
 
 .sidebar-element {
@@ -1591,7 +1591,13 @@ p.notice {
     color: #232323;
 }
 
+.view-mobile {
+  display: none;
+}
 
+.view-pc {
+  display: block;
+}
 
 
 

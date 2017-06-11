@@ -26,14 +26,9 @@
     <div class="content">
       <div class="blog-node">
         
-        <div class="share-icons">
+        <div class="share-icons view-pc">
           <p>分享</p>
-          <div class="icon-wrap">
-            <i class="fa fa-weixin" aria-hidden="true"></i>
-          </div>
-          <div class="icon-wrap">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </div>
+          <?php echo open_social_share_html();?>
         </div>
         
         <div class="article-wrap">
@@ -68,6 +63,10 @@
               ) );
             ?>
           </div><!-- .entry-content -->
+
+          <div class="share-icons view-mobile clearfix">
+            <?php echo open_social_share_html();?>
+          </div>
 
           <div class="tags-box">
             <ul class="clearfix">

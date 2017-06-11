@@ -247,6 +247,26 @@
   });
 
   $(function () {
+
+    // 生成 html
+    var html = '<div class="row clearfix">'+
+      '<p class="price-text1">单价 {price} /小时</p>'+
+      '<div class="float-style" >' +
+      '<a data-id="{id}" data-url="url" class="common-btn service-btn-1 xyv2-add-to-cart">添加购物车</a>' +
+      '<a data-id="{id}" data-url="url" class="common-btn service-btn-2 directly-buy">直接购买</a>' +
+      '</div>' + 
+      '</div>';
+
+    $('article.product').each(function () {
+      var $product = $(this);
+      var newhtml = html.replace('{price}', $product.data('price'))
+        .replace('{id}', $product.data('id'))
+        .replace('{url}', $product.data('url'));
+
+      //$product.find('>.entry-content').append(newhtml);
+    });
+
+
 		function addToCart(id, url, quantity, cb) {
 		  	var $window = $(window);
 				if (typeof quantity == 'function') {
@@ -295,8 +315,9 @@
 		  });
   });
 
+  // PC
   $(function () {
-		var $floatMenu = $('.float-menu');
+		var $floatMenu = $('.float-menu.view-pc');
 
 		if ($floatMenu.size() <= 0) return ;
 
@@ -306,7 +327,6 @@
 	  var offsetLeft= $floatMenu.offset()['left'];
 		
 		$floatMenu.find('li').click(function () {
-			console.log({scrollTop: $('#post-' + $(this).data('id')).offset()['top']});
 			$('body').stop().animate({scrollTop: $('#post-' + $(this).data('id')).offset()['top']});
 		});
 
@@ -324,6 +344,48 @@
 	  		$floatMenu.removeAttr('style');
 	  	}
 	  }).trigger('scroll');
+  });
+
+  // mobile
+  $(function () {
+    var $floatMenu = $('.float-menu.view-mobile');
+
+    if ($floatMenu.size() <= 0) return ;
+
+    var top = $floatMenu.css('top').replace('px', '')*1;
+    var left = $floatMenu.css('left').replace('px', '')*1;
+    var offsetTop = $('#post-'+$floatMenu.find('li:eq(0)').data('id')).offset()['top'];
+    var offsetLeft= $floatMenu.offset()['left'];
+
+    
+    $floatMenu.find('li').click(function () {
+      $('body').stop().animate({scrollTop: -offsetTop + $('#post-' + $(this).data('id')).offset()['top']});
+    });
+
+    $(window).scroll(function () {
+      var scrollTop = $(window).scrollTop();
+      var holder = 20;
+      if (scrollTop + 20 >= offsetTop) {
+        //$floatMenu.css('transform', 'translateY(' + ( scrollTop + 20 - offsetTop ) + 'px)' );
+        $floatMenu.css({
+          position: 'fixed',
+          top: holder + 'px',
+          left: offsetLeft
+        });
+      } else {
+        $floatMenu.removeAttr('style');
+      }
+
+      var id = $floatMenu.find('li:eq(0)').data('id');
+      $('article.product').each(function () {
+        var selfOffsetTop = $(this).offset()['top'];
+        if (selfOffsetTop - scrollTop <= offsetTop) {
+          id = $(this).attr('id').replace('post-', '');
+        }
+      });
+      $floatMenu.find('li[data-id='+id+']').addClass('active').siblings().removeClass('active');
+
+    }).trigger('scroll');
   });
 
   $(function () {
@@ -363,7 +425,7 @@
         $('input[name="billing_phone"]').focus();
         event.preventDefault();
         return false;
-      } else if (isPhone()) {
+      } else if (!isPhone()) {
         //alert('请输入正确的手机号码');
         $('input[name="billing_phone"]').focus();
         event.preventDefault();

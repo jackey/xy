@@ -191,7 +191,7 @@
             array(
               'taxonomy' => 'category',
               'field' => 'slug',
-              'terms' => 'cases',
+              'terms' => 'blog',
             ),
           ),
         );
@@ -219,39 +219,21 @@
                       </div>
                     </div>
                     <div class="blog-item item-wrap">
-                      <div class="img-wrap"><img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image"></div>
+                      <div class="img-wrap">
+                        <img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image">
+                        <h4 class="view-mobile"><?php the_title()?></h4>
+                      </div>
                       <div class="blog-item-text item-text">
-                        <h4><?php the_title()?></h4>
-                        <p><?php 
+                        <h4 class="view-pc"><?php the_title()?></h4>
+                        <p class="view-pc"><?php 
                           $content = get_the_content();
                           $simple_content = wp_strip_all_tags($content);
                           echo mb_substr($simple_content, 0, 500).'...';
                         ?></p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              <?php endwhile;?>
-
-              <?php while ($blogs->have_posts()):  ?>
-                <?php $blogs->the_post();?>
-                <li>
-                  <div class="blog-list-item list-item">
-                    <div class="date-flag">
-                      <div class="date-wrap">
-                        <div class="blog-date">
-                          <p>20 <br> DEC </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="blog-item item-wrap">
-                      <div class="img-wrap"><img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image"></div>
-                      <div class="blog-item-text item-text">
-                        <h4><?php the_title()?></h4>
-                        <p><?php 
+                        <p class="view-mobile"><?php 
                           $content = get_the_content();
                           $simple_content = wp_strip_all_tags($content);
-                          echo mb_substr($simple_content, 0, 500).'...';
+                          echo mb_substr($simple_content, 0, 50).'...';
                         ?></p>
                       </div>
                     </div>
@@ -277,7 +259,7 @@
                       <input type="text" placeholder="填入电子信箱" />
                       <button class="btn btn-confirm btn-blue">提交</button>
                     </div>
-                    <a href="/blogs" class="view-more-link">查看全部文章</a>
+                    <a href="/blogs" class="view-more-link">查看全部文章 <i class="view-mobile icon-arrow-right"></i></a>
                   </div>
                 </div>
               </li>

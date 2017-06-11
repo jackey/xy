@@ -20,7 +20,8 @@
 
     <?php 
       
-      $product = new WC_Product(get_the_ID());
+      global $product;
+      //$product = new WC_Product(get_the_ID()); 
       
     ?>
     

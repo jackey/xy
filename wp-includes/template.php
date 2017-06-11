@@ -685,4 +685,6 @@ function load_template( $_template_file, $require_once = true ) {
 	} else {
 		require( $_template_file );
 	}
+
+	
 }

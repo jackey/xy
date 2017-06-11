@@ -260,6 +260,7 @@ function the_content( $more_link_text = null, $strip_teaser = false) {
 function get_the_content( $more_link_text = null, $strip_teaser = false ) {
 	global $page, $more, $preview, $pages, $multipage;
 
+
 	$post = get_post();
 
 	if ( null === $more_link_text ) {

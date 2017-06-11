@@ -19,9 +19,8 @@
   <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
   <![endif]-->
   <?php wp_head(); ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/320.css">
-
   <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/375.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/320.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -37,7 +36,7 @@
           <?php 
             wp_nav_menu(array(
               'menu' => 'main-nav',
-              'container_class' => 'menu main-menu '. ( is_front_page() ? 'bottom': 'top'),
+              'container_class' => 'menu main-menu view-pc'. ( is_front_page() ? 'bottom': 'top'),
               'container' => 'div',
               'menu_class' => 'menu-item',
             ));
@@ -45,12 +44,16 @@
 
           <div class="open-icon view-mobile"></div>
           <div class="logo-small view-mobile"></div>
+          <?php global $has_search;?>
+          <?php if ($has_search):?>
+            <div class="search-icon view-mobile"></div>
+          <?php endif;?>
           <div class="mobile-menu-wrap view-mobile">
             <div class="close-icon"></div>
             <?php
               wp_nav_menu(array(
                 'menu' => 'main-nav',
-                'container_class' => 'menu main-mobile-menu '. ( is_front_page() ? 'bottom': 'top'),
+                'container_class' => 'menu view-mobile main-mobile-menu '. ( is_front_page() ? 'bottom': 'top'),
                 'container' => 'div',
                 'menu_class' => 'menu-item',
               ));

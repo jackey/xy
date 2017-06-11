@@ -6,19 +6,21 @@
 define('DB_NAME', 'xy');
 
 /** MySQL database username */
-define('DB_USER', 'xy');
+define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'admin');
 
 /** MySQL hostname */
-define('DB_HOST', 'db');
+define('DB_HOST', '127.0.0.1:3306');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
+
+define('WP_DEBUG', FALSE);
 
 define('AUTH_KEY',         'Pe1rrd?X7<-#jQtbr5h1#&&bna?P!/NJ3bLE:Mnc|Li!5 d$X#[8EiTsYp|vcf#l');
 define('SECURE_AUTH_KEY',  '=QzK7 A fAO7T$0*=p+H %Jl+;pMcJNLr,?|79@cH_6SCbE `droDc~`eh?O`KFL');
@@ -30,8 +32,9 @@ define('LOGGED_IN_SALT',   '1yC+5x|`i?b^1;fZSdd05 %-vyVF>- A{H9X)nR_Q$,vUb}1!-6V
 define('NONCE_SALT',       'O%BFhf&+ds}[j,C9*T><6T&Vjbhk%E>Di|2rL_|1[mu?LFSE04+prqsMeGnhHr),');
 
 
-define('WP_HOME','http://127.0.0.1:8000');
-define('WP_SITEURL','http://127.0.0.1:8000');
+define('WP_HOME','http://192.168.254.107:8080');
+define('WP_SITEURL','http://192.168.254.107:8080');
+
 
 $table_prefix  = 'wp_';
 

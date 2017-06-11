@@ -21,9 +21,8 @@
   <![endif]-->
   <?php wp_head(); ?>
 
-  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/320.css">
-
   <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/375.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/320.css">
 </head>
 
 <body <?php body_class(); ?>>
@@ -39,7 +38,7 @@
           <?php 
             wp_nav_menu(array(
               'menu' => 'main-nav',
-              'container_class' => 'menu main-menu '. ( is_front_page() ? 'bottom': 'top'),
+              'container_class' => 'menu main-menu view-pc '. ( is_front_page() ? 'bottom': 'top'),
               'container' => 'div',
               'menu_class' => 'menu-item',
             ));
@@ -52,7 +51,7 @@
             <?php
               wp_nav_menu(array(
                 'menu' => 'main-nav',
-                'container_class' => 'menu main-mobile-menu '. ( is_front_page() ? 'bottom': 'top'),
+                'container_class' => 'menu main-mobile-menu view-mobile '. ( is_front_page() ? 'bottom': 'top'),
                 'container' => 'div',
                 'menu_class' => 'menu-item',
               ));

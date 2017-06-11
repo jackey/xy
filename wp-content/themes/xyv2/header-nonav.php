@@ -19,9 +19,8 @@
   <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
   <![endif]-->
   <?php wp_head(); ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/320.css">
-
   <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/375.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_url')?>/css/320.css">
 </head>
 
 <body <?php body_class(); ?>>
