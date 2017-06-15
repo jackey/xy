@@ -32,8 +32,8 @@ define('LOGGED_IN_SALT',   '1yC+5x|`i?b^1;fZSdd05 %-vyVF>- A{H9X)nR_Q$,vUb}1!-6V
 define('NONCE_SALT',       'O%BFhf&+ds}[j,C9*T><6T&Vjbhk%E>Di|2rL_|1[mu?LFSE04+prqsMeGnhHr),');
 
 
-define('WP_HOME','http://192.168.254.107:8080');
-define('WP_SITEURL','http://192.168.254.107:8080');
+define('WP_HOME','http://127.0.0.1:8080');
+define('WP_SITEURL','http://127.0.0.1:8080');
 
 
 $table_prefix  = 'wp_';

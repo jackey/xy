@@ -1599,6 +1599,32 @@ p.notice {
   display: block;
 }
 
+@media all and (max-width: 1300px) {
+  .home-content > img {
+    width: 164px;
+    height: 164px;
+  }
+
+  .home-content h1 {
+    font-size: 30px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+
+  .section-service h2 span.cn, 
+  .section-case h2 span.cn, 
+  .section-blog h2 span.cn, 
+  .section-video h2 span.cn {
+    font-size: 30px;
+  }
+
+  .menu-item-logo img {
+    width: 86px;
+    height: 86px;
+  }
+}
 
 
 
