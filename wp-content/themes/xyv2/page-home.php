@@ -164,7 +164,7 @@
                         </div>
                       </div>
                       <div class="case-text">
-                        <h4><?php the_title()?></h4>
+                        <h4><a href="<?php echo get_permalink()?>"><?php the_title()?></a></h4>
                         <p><?php 
                           $content = get_the_content();
                           $simple_content = wp_strip_all_tags($content);
@@ -220,11 +220,13 @@
                     </div>
                     <div class="blog-item item-wrap">
                       <div class="img-wrap">
-                        <img src="<?php echo bloginfo("template_url")?>/misc/blog1.png" alt="" class="item-image">
-                        <h4 class="view-mobile"><?php the_title()?></h4>
+                        <?php $banner = get_field('list_banner', get_the_ID());?>
+                        <img src="<?php echo $banner;?>" alt="" class="item-image">
+                        <h4 class="view-mobile"><a href="<?php echo get_permalink()?>"><?php the_title()?></a></h4>
                       </div>
                       <div class="blog-item-text item-text">
-                        <h4 class="view-pc"><?php the_title()?></h4>
+                        <h4 class="view-pc">
+                          <a href="<?php echo get_permalink()?>"><?php the_title()?></a></h4>
                         <p class="view-pc"><?php 
                           $content = get_the_content();
                           $simple_content = wp_strip_all_tags($content);
@@ -294,7 +296,7 @@
                 <?php $channels->the_post();?>
                 <li>
                   <div class="list-video-item">
-                    <div class="inner">
+                    <a href="<?php echo get_permalink()?>"><div class="inner">
                       <?php 
                           $poster = get_field('poster', get_the_ID());
                       ?>
@@ -302,11 +304,13 @@
                       <div class="desc">
                         <p><?php the_title()?></p>
                         <i class="fa fa-play-circle-o" aria-hidden="true"></i>
-                      </div>
+                      </div></a>
                     </div>
                   </div>
                 </li>
               <?php endwhile;?>
+
+              <?php wp_reset_query();?>
               
             </ul>
             <button href="/xychannel" class="btn btn-confirm btn-blue">查看全部</button>

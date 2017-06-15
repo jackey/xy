@@ -1567,6 +1567,10 @@ input {
   border: none;
 }
 
+a {
+  color: #56555a;
+}
+
 p.notice {
   float: right;
   margin-top: 20px;
