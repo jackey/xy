@@ -19,12 +19,12 @@
               </div>
               <div class="flinks">
                 <ul class="clearfix">
-                  <li><a href="">关于我们</a></li>
-                  <li><a href="">首页</a></li>
-                  <li><a href="">服务</a></li>
-                  <li><a href="">成功案例</a></li>
-                  <li><a href="">部落格</a></li>
-                  <li><a href="">XY Channel</a></li>
+                  <li><a href="/">首页</a></li>
+                  <li><a href="/product-category/service_application/">申请服务</a></li>
+                  <li><a href="/product-category/service_exam/">考试服务</a></li>
+                  <li><a href="/cases/">成功案例</a></li>
+                  <li><a href="/blogs/">部落格</a></li>
+                  <li><a href="/xychannel/">XY Channel</a></li>
                 </ul>
               </div>
               <span class="copyright">&copy;携隐</span>
