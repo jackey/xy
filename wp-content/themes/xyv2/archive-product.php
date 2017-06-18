@@ -30,12 +30,12 @@
             );
             $products = new WP_Query($args);
 
-            while ($products->have_posts()) {
-              $products->the_post();
+            while (have_posts()) {
+              the_post();
               global $product; ?>
               <li data-id="<?php echo $product->id ?>"><?php echo $product->name; ?></li>
            <?php  }
-            wp_reset_query();
+            wp_reset_postdata();
           ?>
         </ul>
       </div>
@@ -61,12 +61,12 @@
             );
             $products = new WP_Query($args);
 
-            while ($products->have_posts()) {
-              $products->the_post();
+            while (have_posts()) {
+              the_post();
               global $product; ?>
               <li data-id="<?php echo $product->id ?>"><?php echo $product->name; ?></li>
            <?php  }
-            wp_reset_query();
+            wp_reset_postdata();
           ?>
         </ul>
       </div>

@@ -1630,6 +1630,40 @@ p.notice {
   }
 }
 
+.share-icons p {
+  display: none;
+}
+
+.share_box {
+  width: 100px;
+}
+
+.share_button {
+}
+
+.view-pc .share_icon_weibo {
+  display: none;
+}
+
+.view-pc .share_icon_wechat {
+    background: url(misc/social_wechat.png);
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    background-size: 100%;
+}
+
+.view-pc .share_icon_twitter {
+    background: url(misc/social_twitter.png);
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    background-size: 100%;
+}
+
+
 
 
 

@@ -12,9 +12,9 @@
 
 <div class="tabs blogs-tabs">
   <ul class="clearfix">
-    <li><a href="/">部落格</a></li>
+    <li><a href="/">首页</a></li>
     <li class="sperator"><a>/</a></li>
-    <li><a href="/blogs">全部文章</a></li>
+    <li><a href="/blogs">部落格</a></li>
     <li class="sperator"><a href="">/</a></li>
     <li><a href=""> <?php the_title()?></a></li>
   </ul>
