@@ -72,6 +72,7 @@
       </div>
       
       <?php 
+        ob_start();
         global $wp_query;
         while ( have_posts() ) : 
           the_post();
@@ -81,6 +82,8 @@
           get_template_part( 'content', 'product' );
 
         endwhile;
+        $content = ob_end_flush();
+        print $content;
       ?>
       
       <div class="view-mobile">
