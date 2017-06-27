@@ -87,7 +87,7 @@
             <div class="home-content">
               <img src="<?php echo bloginfo('template_url')?>/misc/bg-logo.png" alt="">
               <h1>说出属于你的，独一无二的故事</h1>
-              <p>所有关于留学考试，留学申请，职业发展问题的问题</p>
+              <p>所有关于留学考试，留学申请，职业发展问题</p>
               <p>你都可以在这里找到答案</p>
             </div>
           </div>

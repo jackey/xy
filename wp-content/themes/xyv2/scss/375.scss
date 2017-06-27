@@ -309,8 +309,11 @@
             text-align: left;
             left: 50%;
             margin-left: -45%;
-            color: #fff;
             z-index: 111;
+
+            a {
+              color: #fff;
+            }
           }
 
           &:after {
